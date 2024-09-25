@@ -1,0 +1,31 @@
+email,nom_prenom,quartier,sexe,age,profession,transport,frequence,distance,app,satisfaction,ticket,depense
+fatou.sow1@example.com,Fatou Sow,Ouakam,Féminin,28,Étudiant,Bus,Autre,Entre 10 et 15 km,Oui,Insatisfait,Abonnement mensuel,17178 FCFA
+awa.thiam2@example.com,Awa Thiam,Mermoz,Féminin,44,Élève,TER,Autre,Entre 10 et 15 km,Oui,Très satisfait,Carte prépayée,12861 FCFA
+astou.dieng3@example.com,Astou Dieng,Diamniadio,Féminin,27,Élève,Bus,Occasionnelle,Entre 15 et 20 km,Non,Neutre,Ticket à l'unité,11695 FCFA
+coumba.faye4@example.com,Coumba Faye,Diamniadio,Féminin,24,Professeur,Bus,Journalière (plusieurs fois par jour),Entre 15 et 20 km,Oui,Satisfait,Je ne prends pas ces transports,19353 FCFA
+bamba.diallo5@example.com,Bamba Diallo,Almadies,Féminin,26,Personnel,Bus,Hebdomadaire (plusieurs fois par semaine),Entre 15 et 20 km,Non,Insatisfait,Abonnement mensuel,13441 FCFA
+aminata.ba6@example.com,Aminata Ba,Yoff,Masculin,59,Professeur,À pied,Occasionnelle,Entre 15 et 20 km,Oui,Neutre,Je ne prends pas ces transports,4533 FCFA
+pape.dieng7@example.com,Pape Dieng,Point E,Féminin,15,Élève,TER,Autre,Entre 0 et 5 km,Non,Satisfait,Ticket à l'unité,6703 FCFA
+cheikh.ndiaye8@example.com,Cheikh Ndiaye,Ouakam,Masculin,15,Professeur,Taxi,Journalière (plusieurs fois par jour),Entre 0 et 5 km,Oui,Satisfait,Carte prépayée,4533 FCFA
+moussa.sow9@example.com,Moussa Sow,Médina,Masculin,32,Élève,Bus,Occasionnelle,Entre 10 et 15 km,Oui,Neutre,Ticket à l'unité,13441 FCFA
+aminata.ndiaye10@example.com,Aminata Ndiaye,Médina,Féminin,46,Professeur,Taxi,Journalière (plusieurs fois par jour),Entre 15 et 20 km,Oui,Très satisfait,Carte prépayée,1601 FCFA
+aminata.sarr11@example.com,Aminata Sarr,Almadies,Féminin,50,Étudiant,TER,Autre,Entre 5 et 10 km,Non,Satisfait,Ticket à l'unité,3685 FCFA
+aminata.dieng12@example.com,Aminata Dieng,Autre,Masculin,25,Étudiant,Taxi,Journalière (plusieurs fois par jour),Entre 10 et 15 km,Non,Insatisfait,Carte prépayée,19353 FCFA
+ndèye.kane13@example.com,Ndèye Kane,Ouakam,Féminin,44,Professeur,Autre,Hebdomadaire (plusieurs fois par semaine),Entre 5 et 10 km,Non,Neutre,Abonnement mensuel,17343 FCFA
+awa.faye14@example.com,Awa Faye,Hann Marinas,Féminin,41,Élève,TER,Hebdomadaire (plusieurs fois par semaine),Entre 10 et 15 km,Oui,Très insatisfait,Ticket à l'unité,11695 FCFA
+pape.thiam15@example.com,Pape Thiam,Hann Marinas,Féminin,19,Professeur,BRT,Hebdomadaire (plusieurs fois par semaine),Entre 5 et 10 km,Non,Satisfait,Abonnement mensuel,6681 FCFA
+mamadou.sow16@example.com,Mamadou Sow,Autre,Masculin,45,Professeur,À pied,Autre,Entre 15 et 20 km,Oui,Insatisfait,Ticket à l'unité,12246 FCFA
+seydou.mbaye17@example.com,Seydou Mbaye,Hann Marinas,Féminin,26,Personnel,Autre,Occasionnelle,Plus de 20km,Oui,Très insatisfait,Ticket à l'unité,6703 FCFA
+abdoulaye.sarr18@example.com,Abdoulaye Sarr,Médina,Féminin,32,Étudiant,TER,Mensuelle (plusieurs fois par mois),Entre 10 et 15 km,Oui,Très satisfait,Abonnement mensuel,4708 FCFA
+mariama.sakho19@example.com,Mariama Sakho,Plateau,Masculin,46,Professeur,Autre,Journalière (plusieurs fois par jour),Plus de 20km,Non,Neutre,Abonnement mensuel,14894 FCFA
+abdoulaye.kane20@example.com,Abdoulaye Kane,Yoff,Féminin,54,Élève,TER,Occasionnelle,Entre 0 et 5 km,Oui,Très satisfait,Ticket à l'unité,8270 FCFA
+pape.fall21@example.com,Pape Fall,Ouakam,Féminin,22,Étudiant,TER,Mensuelle (plusieurs fois par mois),Entre 15 et 20 km,Non,Insatisfait,Abonnement mensuel,12861 FCFA
+cheikh.gueye22@example.com,Cheikh Gueye,Almadies,Masculin,21,Élève,Bus,Occasionnelle,Entre 5 et 10 km,Non,Très insatisfait,Abonnement mensuel,14894 FCFA
+mamadou.cissé23@example.com,Mamadou Cissé,Almadies,Féminin,15,Professeur,BRT,Autre,Entre 5 et 10 km,Oui,Insatisfait,Abonnement mensuel,13441 FCFA
+mariama.diallo24@example.com,Mariama Diallo,Diamniadio,Masculin,34,Étudiant,Autre,Autre,Entre 0 et 5 km,Non,Très insatisfait,Abonnement mensuel,8270 FCFA
+mamadou.sow25@example.com,Mamadou Sow,Hann Marinas,Masculin,27,Élève,Bus,Occasionnelle,Entre 15 et 20 km,Oui,Très satisfait,Carte prépayée,2394 FCFA
+awa.cissé26@example.com,Awa Cissé,Diamniadio,Masculin,54,Étudiant,Bus,Autre,Entre 5 et 10 km,Oui,Très satisfait,Ticket à l'unité,4708 FCFA
+abdoulaye.sakho27@example.com,Abdoulaye Sakho,Mermoz,Masculin,31,Professeur,À pied,Hebdomadaire (plusieurs fois par semaine),Entre 10 et 15 km,Oui,Très satisfait,Carte prépayée,17343 FCFA
+aminata.diallo28@example.com,Aminata Diallo,Autre,Féminin,31,Personnel,Taxi,Occasionnelle,Entre 5 et 10 km,Oui,Neutre,Ticket à l'unité,2394 FCFA
+seydou.fall29@example.com,Seydou Fall,Plateau,Masculin,49,Personnel,TER,Mensuelle (plusieurs fois par mois),Entre 0 et 5 km,Oui,Insatisfait,Abonnement mensuel,10711 FCFA
+coumba.sakho30@example.com,Coumba Sakho,Hann Marinas,Féminin,33,Personnel,Autre,Journalière (plusieurs fois par jour),Entre 10 et 15 km,Oui,Insatisfait,Ticket à l'unité,1601 FCFA

@@ -1,0 +1,3 @@
+- beautifier le site qui contient le jupy notebook.
+- Trouver des solutions au probleme de requete sql defaillantes
+- 
