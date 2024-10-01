@@ -14,6 +14,20 @@
             "username": "root",
             "connectionTimeout": 30,
             "askForPassword": true
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "Projet BDD",
+            "database": "isja_transport",
+            "connectionTimeout": 30,
+            "username": "root"
         }
     ]
 }
