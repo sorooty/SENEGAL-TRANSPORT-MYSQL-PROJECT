@@ -1,0 +1,11 @@
+station_depart           ,station_arrivee          ,nombre_trajets
+"Gare de Dakar"          ,"Station BRT Liberté 5"  ,            17
+"Gare de Diamniadio"     ,"Station BRT Liberté 5"  ,            14
+"Gare de Dakar"          ,"Gare de Diamniadio"     ,            13
+"Station BRT Guédiawaye" ,"Gare de Diamniadio"     ,            13
+"Station BRT Liberté 5"  ,"Gare de Diamniadio"     ,            11
+"Station BRT Liberté 5"  ,"Station BRT Guédiawaye" ,            10
+"Station BRT Liberté 5"  ,"Gare de Dakar"          ,            10
+"Station BRT Guédiawaye" ,"Station BRT Liberté 5"  ,            10
+"Station BRT Guédiawaye" ,"Gare de Dakar"          ,             9
+"Gare de Diamniadio"     ,"Station BRT Guédiawaye" ,             8

@@ -208,4 +208,4 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
 
 inserer_donnees_factices()
 
-print("Les données factices locales ont été insérées")
+print("Les données locales ont été insérées avec succès !")
