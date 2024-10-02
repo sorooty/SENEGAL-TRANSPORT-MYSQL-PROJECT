@@ -1,14 +1,18 @@
 # **Projet 11 : "SEN-TRANSPORT", Analyse des Profils des Utilisateurs des Transports Publics à Dakar**
-![Texte alternatif](./imgs/ter1.jpeg)
+![Texte alternatif](./imgs/imageTER.png)
 
 >### **Fiche Technique :** *Présentation de la base de données, de ses composantes puis analyse et interprétation des résultats obtenus*
 
-**Auteurs**: 
-- **Seyni Jr. Baldé**,  Data-Analyst chez *CESI-IT*
-- **Jean Léandre Tiemtoré**, Data-Administrator chez *CESI-IT*
-- **Sonia Hameg**, Data-Analyst chez *CESI-IT*
+---
 
->Ce notebook présente et explique en détail les requêtes SQL utilisées pour analyser les données des utilisateurs des transports publics à Dakar, Sénégal, plus particulièrement du **TER et du BRT**. Le but est de rendre chaque requête compréhensible, même pour les non-initiés à SQL.
+### **Les Auteurs**: 
+- **Seyni Jr. Baldé**,  Data-Analyst chez *CES-IT*
+- **Jean Léandre Tiemtoré**, Data-Administrator chez *CES-IT*
+- **Sonia Hameg**, Data-Analyst chez *CES-IT*
+
+
+> Ce notebook, faisant état de **fiche technique**, présente et explique en détail le processus que notre équipe a utilisée pour analyser les données des utilisateurs des transports publics à Dakar, Sénégal, plus particulièrement du **TER et du BRT**. 
+Au delà de **rendre compte de notre travail de recherche et d'enquete**, l'objectif final est de fournir **une explication concise et compréhensible**, même pour les non-initiés à l'informatique technique.
 
 ### **1.1. Objectifs**
 - **Profilage des utilisateurs** : catégorisation des usagers (élèves, personnel, etc.).
@@ -16,13 +20,17 @@
 - **Mesure de la satisfaction** : évaluation des retours d'expérience des utilisateurs.
 - **Propositions d'innovations** : suggestions d'améliorations basées sur les données récoltées.
 
+
+
+
 ---
 
 ## **2. Modélisation des Données**
 
 ### **2.1. Modèle Conceptuel de Données (MCD)**
 
-Le MCD permet de définir les entités et les relations entre elles. Voici les principales entités du projet :
+>Le MCD permet de **définir les entités et les relations entre elles**. 
+Voici les principales entités de notre étude projet :
 
 - **Utilisateur** : Représente les informations des usagers (élèves, personnel).
 - **Transport** : Type de transport utilisé (TER, BRT, autre).
@@ -33,7 +41,7 @@ Le MCD permet de définir les entités et les relations entre elles. Voici les p
 
 ### **2.2. Modèle Logique de Données (MLD)**
 
-Le MLD est la traduction technique du MCD, structuré sous forme de tables relationnelles dans la base de données MySQL. Voici les tables créées et leurs colonnes respectives :
+> Le MLD est la traduction technique du MCD, structuré sous forme de tables relationnelles dans la base de données MySQL. Voici les tables créées et leurs colonnes respectives :
 
 #### **Utilisateur**
 - `id_utilisateur` (PRIMARY KEY)
@@ -77,16 +85,15 @@ Le MLD est la traduction technique du MCD, structuré sous forme de tables relat
 
 ## **3. Mise en Œuvre Technique**
 
+
 ### **3.1. Connexion à la Base de Données MySQL avec Python**
 
-Le code Python suivant permet de se connecter à la base de données MySQL et d'insérer des données factices :
-
-```python
+> Le code Python suivant permet de **se connecter à la base de données MySQL et d'insérer des données factices :**
 import mysql.connector
 from random import choice, randint
 from faker import Faker
 
-# Initialiser Faker pour générer des données factices en français
+# **Initialiser Faker pour générer des données factices en français**
 fake = Faker('fr_FR')
 
 # Listes élargies de prénoms et noms sénégalais
@@ -294,13 +301,12 @@ inserer_donnees_factices()
 
 print("Les données locales ont été insérées avec succès !")
 
-```
 
 ### **3.2. Création des Tables dans MySQL**
 
 Voici les commandes SQL pour la création des tables :
 
-```sql
+
 CREATE TABLE IF NOT EXISTS Utilisateur (
     id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -314,6 +320,7 @@ CREATE TABLE IF NOT EXISTS Transport (
     nom_transport ENUM('TER', 'BRT', 'Autre') NOT NULL,
     type_transport VARCHAR(50) NOT NULL
 );
+
 
 CREATE TABLE IF NOT EXISTS Station (
     id_station INT AUTO_INCREMENT PRIMARY KEY,
@@ -334,6 +341,7 @@ CREATE TABLE IF NOT EXISTS Trajet (
     FOREIGN KEY (id_station_arrivee) REFERENCES Station(id_station)
 );
 
+
 CREATE TABLE IF NOT EXISTS Enquete (
     id_enquete INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
@@ -343,6 +351,7 @@ CREATE TABLE IF NOT EXISTS Enquete (
     FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur)
 );
 
+
 CREATE TABLE IF NOT EXISTS Utilisation (
     id_utilisation INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
@@ -351,7 +360,7 @@ CREATE TABLE IF NOT EXISTS Utilisation (
     FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
     FOREIGN KEY (id_transport) REFERENCES Transport(id_transport)
 );
-```
+
 
 ---
 
@@ -360,48 +369,34 @@ CREATE TABLE IF NOT EXISTS Utilisation (
 ### **4.1. Requêtes SQL pour l'Analyse des Données**
 
 Voici une série de requêtes SQL pour analyser les données de la base de données :
-
-- **Nombre total d'utilisateurs par type (élève ou personnel)** :
-```sql
+### **Nombre total d'utilisateurs par type (élève ou personnel)** :
 SELECT type_utilisateur, COUNT(*) AS nombre_utilisateurs
 FROM Utilisateur
 GROUP BY type_utilisateur;
-```
-
-- **Nombre total de trajets effectués par chaque utilisateur** :
-```sql
+### **Nombre total de trajets effectués par chaque utilisateur** :
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 LEFT JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 GROUP BY Utilisateur.id_utilisateur;
-```
+### **Répartition des transports utilisés** :
 
-- **Répartition des transports utilisés** :
-```sql
 SELECT Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Trajet
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
-```
-
-- **Top 5 des utilisateurs les plus actifs** :
-```sql
+### **Top 5 des utilisateurs les plus actifs** :
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 GROUP BY Utilisateur.id_utilisateur
 ORDER BY nombre_trajets DESC
 LIMIT 5;
-```
-
-- **Satisfaction moyenne par type de transport** :
-```sql
+### **Satisfaction moyenne par type de transport** :
 SELECT Transport.nom_transport, AVG(Enquete.satisfaction) AS satisfaction_moyenne
 FROM Enquete
 JOIN Trajet ON Enquete.id_utilisateur = Trajet.id_utilisateur
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
-```
 
 ---
 
@@ -426,6 +421,7 @@ Sur la base des données analysées, voici quelques propositions d'innovations p
 - **Développement d'une application mobile** : Permettre aux usagers de consulter les horaires en temps réel et d'acheter leurs billets directement depuis l'application.
 - **Programme de fidélité** : Encourager l'utilisation fréquente du TER et du BRT à travers des programmes de fidélité récompensant les usagers réguliers.
 - **Amélioration des infrastructures** : Augmenter la capacité des stations les plus fréquentées et optimiser la gestion des flux pour réduire les temps d'attente.
+
 
 ---
 
