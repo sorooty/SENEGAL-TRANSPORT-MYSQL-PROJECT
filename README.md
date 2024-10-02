@@ -5,6 +5,20 @@
 
 ---
 
+## Sommaire
+
+1. [Les Auteurs](#les-auteurs)
+2. [Objectifs](#objectifs)
+    - [Profilage des utilisateurs](#profilage-des-utilisateurs)
+    - [Modes de transport utilisés](#modes-de-transport-utilisés)
+3. [Méthodologie](#méthodologie)
+    - [Source des données](#source-des-données)
+    - [Techniques d'analyse](#techniques-danalyse)
+4. [Résultats et Analyses](#résultats-et-analyses)
+    - [Catégorisation des utilisateurs](#catégorisation-des-utilisateurs)
+    - [Utilisation des transports TER et BRT](#utilisation-des-transports-ter-et-brt)
+5. [Conclusion](#conclusion)
+
 ### **Les Auteurs**: 
 - **Seyni Jr. Baldé**,  Data-Analyst chez *CES-IT*
 - **Jean Léandre Tiemtoré**, Data-Administrator chez *CES-IT*
