@@ -89,6 +89,8 @@ Voici les principales entités de notre étude projet :
 ### **3.1. Connexion à la Base de Données MySQL avec Python**
 
 > Le code Python suivant permet de **se connecter à la base de données MySQL et d'insérer des données factices :**
+
+```python
 import mysql.connector
 from random import choice, randint
 from faker import Faker
@@ -300,13 +302,13 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
 inserer_donnees_factices()
 
 print("Les données locales ont été insérées avec succès !")
-
+```
 
 ### **3.2. Création des Tables dans MySQL**
 
 Voici les commandes SQL pour la création des tables :
 
-
+``` sql
 CREATE TABLE IF NOT EXISTS Utilisateur (
     id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -360,7 +362,7 @@ CREATE TABLE IF NOT EXISTS Utilisation (
     FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
     FOREIGN KEY (id_transport) REFERENCES Transport(id_transport)
 );
-
+``` 
 
 ---
 
@@ -369,34 +371,45 @@ CREATE TABLE IF NOT EXISTS Utilisation (
 ### **4.1. Requêtes SQL pour l'Analyse des Données**
 
 Voici une série de requêtes SQL pour analyser les données de la base de données :
+
 ### **Nombre total d'utilisateurs par type (élève ou personnel)** :
+```sql
 SELECT type_utilisateur, COUNT(*) AS nombre_utilisateurs
 FROM Utilisateur
 GROUP BY type_utilisateur;
+```
 ### **Nombre total de trajets effectués par chaque utilisateur** :
+```sql
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 LEFT JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 GROUP BY Utilisateur.id_utilisateur;
-### **Répartition des transports utilisés** :
+```
 
+### **Répartition des transports utilisés** :
+```sql
 SELECT Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Trajet
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
+```
 ### **Top 5 des utilisateurs les plus actifs** :
+```sql
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 GROUP BY Utilisateur.id_utilisateur
 ORDER BY nombre_trajets DESC
 LIMIT 5;
+```
 ### **Satisfaction moyenne par type de transport** :
+```sql
 SELECT Transport.nom_transport, AVG(Enquete.satisfaction) AS satisfaction_moyenne
 FROM Enquete
 JOIN Trajet ON Enquete.id_utilisateur = Trajet.id_utilisateur
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
+```
 
 ---
 
