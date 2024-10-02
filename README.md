@@ -9,8 +9,8 @@
 
 1. [Fiche Technique](#fiche-technique)
 2. [Les Auteurs](#les-auteurs)
-3. [Objectifs](#objectifs)
-4. [Modélisation des Données](#modélisation-des-données)
+3. [Objectifs](#1.1.-Objectifs)
+4. [Modélisation des Données](#Modélisation-des-données)
    - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
    - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
 5. [Résultats et Interprétation](#résultats-et-interprétation)
@@ -107,7 +107,7 @@ import mysql.connector
 from random import choice, randint
 from faker import Faker
 
-# **Initialiser Faker pour générer des données factices en français**
+# **Initialiser Faker pour générer des données textuelles factices en français**
 fake = Faker('fr_FR')
 
 # Listes élargies de prénoms et noms sénégalais
