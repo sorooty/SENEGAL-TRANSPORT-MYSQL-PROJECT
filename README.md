@@ -1,21 +1,15 @@
 # **Projet 11 : "SEN-TRANSPORT", Analyse des Profils des Utilisateurs des Transports Publics à Dakar**
+
+---
+
 ![Texte alternatif](./imgs/imageTER.png)
+
+---
+
 
 >### **Fiche Technique :** *Présentation de la base de données, de ses composantes puis analyse et interprétation des résultats obtenus*
 
 ---
-
-## Sommaire
-
-1. [Fiche Technique](#fiche-technique)
-2. [Les Auteurs](#les-auteurs)
-3. [Objectifs](#1.1.-Objectifs)
-4. [Modélisation des Données](#Modélisation-des-données)
-   - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
-   - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
-5. [Résultats et Interprétation](#résultats-et-interprétation)
-6. [Propositions d'Innovations](#propositions-dinnovations)
-7. [Conclusion](#conclusion)
 
 ### **Les Auteurs**: 
 - **Seyni Jr. Baldé**,  Data-Analyst chez *CES-IT*
@@ -101,13 +95,11 @@ Voici les principales entités de notre étude projet :
 ### **3.1. Connexion à la Base de Données MySQL avec Python**
 
 > Le code Python suivant permet de **se connecter à la base de données MySQL et d'insérer des données factices :**
-
-```python
 import mysql.connector
 from random import choice, randint
 from faker import Faker
 
-# **Initialiser Faker pour générer des données textuelles factices en français**
+# **Initialiser Faker pour générer des données factices en français**
 fake = Faker('fr_FR')
 
 # Listes élargies de prénoms et noms sénégalais
@@ -314,13 +306,12 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
 inserer_donnees_factices()
 
 print("Les données locales ont été insérées avec succès !")
-```
+
 
 ### **3.2. Création des Tables dans MySQL**
 
-Voici les commandes SQL pour la création des tables :
-
-``` sql
+>Voici les **commandes SQL pour la création des tables** :
+-- 1) Création de la table Utilisateur
 CREATE TABLE IF NOT EXISTS Utilisateur (
     id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -328,20 +319,26 @@ CREATE TABLE IF NOT EXISTS Utilisateur (
     type_utilisateur ENUM('élève', 'personnel') NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE
 );
-
+>###  **Affichage de la table :**
+![Affichage](./imgs/imageUtilisateur.png)
+-- 2) Création de la table Transport
 CREATE TABLE IF NOT EXISTS Transport (
     id_transport INT AUTO_INCREMENT PRIMARY KEY,
     nom_transport ENUM('TER', 'BRT', 'Autre') NOT NULL,
     type_transport VARCHAR(50) NOT NULL
 );
 
-
+>###  **Affichage de la table :**
+![image.png](./imgs/imageTransport.png)
+-- Création de la table Station
 CREATE TABLE IF NOT EXISTS Station (
     id_station INT AUTO_INCREMENT PRIMARY KEY,
     nom_station VARCHAR(100) NOT NULL,
     localisation VARCHAR(100) NOT NULL
 );
-
+>###  **Affichage de la table :**
+![image.png](./imgs/imageStation.png)
+-- 4) Création de la table Trajet
 CREATE TABLE IF NOT EXISTS Trajet (
     id_trajet INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
@@ -355,7 +352,9 @@ CREATE TABLE IF NOT EXISTS Trajet (
     FOREIGN KEY (id_station_arrivee) REFERENCES Station(id_station)
 );
 
-
+>###  **Affichage de la table :**
+![image.png](./imgs/imagetrajet.png)
+-- 5) Création de la table Enquete 
 CREATE TABLE IF NOT EXISTS Enquete (
     id_enquete INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
@@ -365,7 +364,9 @@ CREATE TABLE IF NOT EXISTS Enquete (
     FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur)
 );
 
-
+>###  **Affichage de la table :**
+![image.png](./imgs/imageEnquete.png)
+-- 6) Création de la table Utilisation 
 CREATE TABLE IF NOT EXISTS Utilisation (
     id_utilisation INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
@@ -374,7 +375,9 @@ CREATE TABLE IF NOT EXISTS Utilisation (
     FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
     FOREIGN KEY (id_transport) REFERENCES Transport(id_transport)
 );
-``` 
+
+>###  **Affichage de la table :**
+![image.png](./imgs/imageUtilisation.png)
 
 ---
 
@@ -383,45 +386,34 @@ CREATE TABLE IF NOT EXISTS Utilisation (
 ### **4.1. Requêtes SQL pour l'Analyse des Données**
 
 Voici une série de requêtes SQL pour analyser les données de la base de données :
-
 ### **Nombre total d'utilisateurs par type (élève ou personnel)** :
-```sql
 SELECT type_utilisateur, COUNT(*) AS nombre_utilisateurs
 FROM Utilisateur
 GROUP BY type_utilisateur;
-```
 ### **Nombre total de trajets effectués par chaque utilisateur** :
-```sql
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 LEFT JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 GROUP BY Utilisateur.id_utilisateur;
-```
-
 ### **Répartition des transports utilisés** :
-```sql
+
 SELECT Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Trajet
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
-```
 ### **Top 5 des utilisateurs les plus actifs** :
-```sql
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 GROUP BY Utilisateur.id_utilisateur
 ORDER BY nombre_trajets DESC
 LIMIT 5;
-```
 ### **Satisfaction moyenne par type de transport** :
-```sql
 SELECT Transport.nom_transport, AVG(Enquete.satisfaction) AS satisfaction_moyenne
 FROM Enquete
 JOIN Trajet ON Enquete.id_utilisateur = Trajet.id_utilisateur
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
-```
 
 ---
 
@@ -430,9 +422,7 @@ GROUP BY Transport.nom_transport;
 Les résultats de l'analyse ont permis de mettre en lumière plusieurs tendances :
 
 1. **Profil des utilisateurs** : Environ 60% des usagers sont des élèves, et 40% sont du personnel.
-2. **Fréquence d'utilisation** : Le TER est le transport le plus utilisé quotidiennement
-
-, suivi du BRT.
+2. **Fréquence d'utilisation** : Le TER est le transport le plus utilisé quotidiennement,suivi du BRT.
 3. **Satisfaction** : Le TER affiche une satisfaction moyenne de 7/10, tandis que le BRT a une satisfaction moyenne de 6/10.
 
 Ces données offrent une vue d'ensemble sur l'utilisation des transports à Dakar et mettent en évidence des axes d'amélioration.
