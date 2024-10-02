@@ -7,8 +7,8 @@
 
 ## Sommaire
 
-1. [Les Auteurs](#les-auteurs)
-2. [Objectifs](#objectifs)
+1. [Les Auteurs](#Les-Auteurs)
+2. [Objectifs](#1.1.-Objectifs)
     - [Profilage des utilisateurs](#profilage-des-utilisateurs)
     - [Modes de transport utilisés](#modes-de-transport-utilisés)
 3. [Méthodologie](#méthodologie)
