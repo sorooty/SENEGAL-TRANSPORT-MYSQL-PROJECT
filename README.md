@@ -340,7 +340,7 @@ CREATE TABLE IF NOT EXISTS Transport (
 ```
 
 >###  **Affichage de la table :**
-![Affichage](./imgs/imageUtilisateur.png)
+![Affichage](./imgs/imageTransport.png)
 
 ```sql
 CREATE TABLE IF NOT EXISTS Station (
@@ -350,7 +350,7 @@ CREATE TABLE IF NOT EXISTS Station (
 );
 ```
 >###  **Affichage de la table :**
-![Affichage](./imgs/imageUtilisateur.png)
+![Affichage](./imgs/imageStation.png)
 
 ```sql
 CREATE TABLE IF NOT EXISTS Trajet (
@@ -367,7 +367,7 @@ CREATE TABLE IF NOT EXISTS Trajet (
 );
 ```
 >###  **Affichage de la table :**
-![Affichage](./imgs/imageUtilisateur.png)
+![Affichage](./imgs/imagetrajet.png)
 
 ```sql
 CREATE TABLE IF NOT EXISTS Enquete (
@@ -380,7 +380,7 @@ CREATE TABLE IF NOT EXISTS Enquete (
 );
 ```
 >###  **Affichage de la table :**
-![Affichage](./imgs/imageUtilisateur.png)
+![Affichage](./imgs/imageEnquete.png)
 
 ```sql
 CREATE TABLE IF NOT EXISTS Utilisation (
@@ -394,7 +394,7 @@ CREATE TABLE IF NOT EXISTS Utilisation (
 ``` 
 
 >###  **Affichage de la table :**
-![Affichage](./imgs/imageUtilisateur.png)
+![Affichage](./imgs/imageUtilisation.png)
 
 ---
 
