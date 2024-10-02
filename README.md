@@ -1,7 +1,6 @@
 # **Projet 11 : "SEN-TRANSPORT", Analyse des Profils des Utilisateurs des Transports Publics à Dakar**
  
- > A university project throughout which we had to manage a public transport society's database to generate useful mass data-analysis inisghts and study users profile for strategic and marketing purposes
- 
+ > A university project throughout which we had to manage a public transport society's database to generate useful mass data-analysis inisghts and study users profile for strategic and marketing purposes.
 ![Texte alternatif](./imgs/ter1.jpeg)
 
 >### **Fiche Technique :** *Présentation de la base de données, de ses composantes puis analyse et interprétation des résultats obtenus*
@@ -141,4 +140,4 @@ CREATE TABLE IF NOT EXISTS Utilisation (
     FOREIGN KEY (id_transport) REFERENCES Transport(id_transport)
 );
 ```
-### **Étape 2 : (à terminer)
+### **Étape 2 : **
