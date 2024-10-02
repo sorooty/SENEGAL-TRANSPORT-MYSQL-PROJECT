@@ -7,17 +7,15 @@
 
 ## Sommaire
 
-1. [Les Auteurs](#Les-Auteurs)
-2. [Objectifs](#1.1.-Objectifs)
-    - [Profilage des utilisateurs](#profilage-des-utilisateurs)
-    - [Modes de transport utilisés](#modes-de-transport-utilisés)
-3. [Méthodologie](#méthodologie)
-    - [Source des données](#source-des-données)
-    - [Techniques d'analyse](#techniques-danalyse)
-4. [Résultats et Analyses](#résultats-et-analyses)
-    - [Catégorisation des utilisateurs](#catégorisation-des-utilisateurs)
-    - [Utilisation des transports TER et BRT](#utilisation-des-transports-ter-et-brt)
-5. [Conclusion](#conclusion)
+1. [Fiche Technique](#fiche-technique)
+2. [Les Auteurs](#les-auteurs)
+3. [Objectifs](#objectifs)
+4. [Modélisation des Données](#modélisation-des-données)
+   - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
+   - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
+5. [Résultats et Interprétation](#résultats-et-interprétation)
+6. [Propositions d'Innovations](#propositions-dinnovations)
+7. [Conclusion](#conclusion)
 
 ### **Les Auteurs**: 
 - **Seyni Jr. Baldé**,  Data-Analyst chez *CES-IT*
