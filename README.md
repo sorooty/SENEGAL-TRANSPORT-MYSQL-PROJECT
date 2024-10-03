@@ -5,35 +5,25 @@
 
 ---
 
-## Sommaire
 
-1. [Fiche Technique](#fiche-technique)
-2. [Les Auteurs](#les-auteurs)
-3. [Objectifs](#1.1.-Objectifs)
-4. [Modélisation des Données](#Modélisation-des-données)
-   - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
-   - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
-5. [Résultats et Interprétation](#résultats-et-interprétation)
-6. [Propositions d'Innovations](#propositions-dinnovations)
-7. [Conclusion](#conclusion)
+## **Aperçu**
 
-### **Les Auteurs**: 
-- **Seyni Jr. Baldé**,  Data-Analyst chez *CES-IT*
-- **Jean Léandre Tiemtoré**, Data-Administrator chez *CES-IT*
-- **Sonia Hameg**, Data-Analyst chez *CES-IT*
+Le projet **SEN-TRANSPORT** a pour but d'analyser les données des utilisateurs des transports publics à Dakar, plus particulièrement du **TER** (Train Express Régional) et du **BRT** (Bus Rapid Transit). Les objectifs sont de comprendre le comportement des usagers, d'analyser les trajets, et de proposer des améliorations basées sur les données collectées.
 
+### **Auteurs**
+- **Seyni Jr. Baldé**, Analyste de données & Chef de projet, CES-IT
+- **Jean Léandre Tiemtoré**, Administrateur de bases de données, CES-IT
+- **Sonia Hameg**, Ingénieure en données, CES-IT
 
-> Ce notebook, faisant état de **fiche technique**, présente et explique en détail le processus que notre équipe a utilisée pour analyser les données des utilisateurs des transports publics à Dakar, Sénégal, plus particulièrement du **TER et du BRT**. 
-Au delà de **rendre compte de notre travail de recherche et d'enquete**, l'objectif final est de fournir **une explication concise et compréhensible**, même pour les non-initiés à l'informatique technique.
+---
 
-### **1.1. Objectifs**
+## **1. Objectifs du Projet**
+
+Les principaux objectifs du projet sont :
 - **Profilage des utilisateurs** : catégorisation des usagers (élèves, personnel, etc.).
-- **Analyse des trajets** : étude des trajets réalisés et des fréquences d'utilisation.
-- **Mesure de la satisfaction** : évaluation des retours d'expérience des utilisateurs.
-- **Propositions d'innovations** : suggestions d'améliorations basées sur les données récoltées.
-
-
-
+- **Analyse des trajets** : étude des trajets effectués et de la fréquence d'utilisation des moyens de transport.
+- **Mesure de la satisfaction** : évaluation de l'expérience des utilisateurs à travers des enquêtes.
+- **Propositions d'innovations** : suggérer des améliorations basées sur les données.
 
 ---
 
@@ -41,57 +31,26 @@ Au delà de **rendre compte de notre travail de recherche et d'enquete**, l'obje
 
 ### **2.1. Modèle Conceptuel de Données (MCD)**
 
->Le MCD permet de **définir les entités et les relations entre elles**. 
-Voici les principales entités de notre étude projet :
-
-- **Utilisateur** : Représente les informations des usagers (élèves, personnel).
+Le MCD décrit les principales entités et leurs relations :
+- **Utilisateur** : Informations générales sur les utilisateurs (élèves, personnel).
 - **Transport** : Type de transport utilisé (TER, BRT, autre).
-- **Station** : Stations desservies par les moyens de transport.
-- **Trajet** : Trajets réalisés par les utilisateurs.
-- **Enquête** : Réponses aux enquêtes sur la satisfaction des usagers.
+- **Station** : Stations desservies.
+- **Trajet** : Détails des trajets.
+- **Enquête** : Réponses aux enquêtes de satisfaction.
 - **Utilisation** : Fréquence d'utilisation des moyens de transport.
 
 ### **2.2. Modèle Logique de Données (MLD)**
 
-> Le MLD est la traduction technique du MCD, structuré sous forme de tables relationnelles dans la base de données MySQL. Voici les tables créées et leurs colonnes respectives :
+Le MLD traduit le MCD dans des tables relationnelles MySQL :
 
-#### **Utilisateur**
-- `id_utilisateur` (PRIMARY KEY)
-- `nom` (VARCHAR)
-- `prenom` (VARCHAR)
-- `type_utilisateur` (ENUM('élève', 'personnel'))
-- `email` (VARCHAR UNIQUE)
-
-#### **Transport**
-- `id_transport` (PRIMARY KEY)
-- `nom_transport` (ENUM('TER', 'BRT', 'Autre'))
-- `type_transport` (VARCHAR)
-
-#### **Station**
-- `id_station` (PRIMARY KEY)
-- `nom_station` (VARCHAR)
-- `localisation` (VARCHAR)
-
-#### **Trajet**
-- `id_trajet` (PRIMARY KEY)
-- `id_utilisateur` (FOREIGN KEY)
-- `id_transport` (FOREIGN KEY)
-- `id_station_depart` (FOREIGN KEY)
-- `id_station_arrivee` (FOREIGN KEY)
-- `date_trajet` (DATETIME)
-
-#### **Enquête**
-- `id_enquete` (PRIMARY KEY)
-- `id_utilisateur` (FOREIGN KEY)
-- `satisfaction` (INT)
-- `commentaires` (TEXT)
-- `date_reponse` (DATE)
-
-#### **Utilisation**
-- `id_utilisation` (PRIMARY KEY)
-- `id_utilisateur` (FOREIGN KEY)
-- `id_transport` (FOREIGN KEY)
-- `frequence_utilisation` (ENUM('quotidienne', 'hebdomadaire', 'mensuelle'))
+| **Table**      | **Colonnes**                                                                 |
+|----------------|------------------------------------------------------------------------------|
+| **Utilisateur**| `id_utilisateur`, `nom`, `prenom`, `type_utilisateur`, `email`               |
+| **Transport**  | `id_transport`, `nom_transport`, `type_transport`                            |
+| **Station**    | `id_station`, `nom_station`, `localisation`                                  |
+| **Trajet**     | `id_trajet`, `id_utilisateur`, `id_transport`, `id_station_depart`, `id_station_arrivee`, `date_trajet` |
+| **Enquête**    | `id_enquete`, `id_utilisateur`, `satisfaction`, `commentaires`, `date_reponse`|
+| **Utilisation**| `id_utilisation`, `id_utilisateur`, `id_transport`, `frequence_utilisation`  |
 
 ---
 
