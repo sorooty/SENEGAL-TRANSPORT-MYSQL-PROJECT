@@ -5,25 +5,35 @@
 
 ---
 
+## Sommaire
 
-## **Aperçu**
+1. [Fiche Technique](#fiche-technique)
+2. [Les Auteurs](#les-auteurs)
+3. [Objectifs](#1.1.-Objectifs)
+4. [Modélisation des Données](#Modélisation-des-données)
+   - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
+   - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
+5. [Résultats et Interprétation](#résultats-et-interprétation)
+6. [Propositions d'Innovations](#propositions-dinnovations)
+7. [Conclusion](#conclusion)
 
-Le projet **SEN-TRANSPORT** a pour but d'analyser les données des utilisateurs des transports publics à Dakar, plus particulièrement du **TER** (Train Express Régional) et du **BRT** (Bus Rapid Transit). Les objectifs sont de comprendre le comportement des usagers, d'analyser les trajets, et de proposer des améliorations basées sur les données collectées.
+### **Les Auteurs**: 
+- **Seyni Jr. Baldé**,  Data-Analyst et manager de projet chez *CES-IT*
+- **Jean Léandre Tiemtoré**, Administrateur de Bases de Données chez *CES-IT*
+- **Sonia Hameg**, Ingénieur de Conception et Modélisation Data chez *CES-IT*
 
-### **Auteurs**
-- **Seyni Jr. Baldé**, Analyste de données & Chef de projet, CES-IT
-- **Jean Léandre Tiemtoré**, Administrateur de bases de données, CES-IT
-- **Sonia Hameg**, Ingénieure en données, CES-IT
 
----
+> Ce notebook, faisant état de **fiche technique**, présente et explique en détail le processus que notre équipe a utilisée pour analyser les données des utilisateurs des transports publics à Dakar, Sénégal, plus particulièrement du **TER et du BRT**. 
+Au delà de **rendre compte de notre travail de recherche et d'enquete**, l'objectif final est de fournir **une explication concise et compréhensible**, même pour les non-initiés à l'informatique technique.
 
-## **1. Objectifs du Projet**
-
-Les principaux objectifs du projet sont :
+### **1.1. Objectifs**
 - **Profilage des utilisateurs** : catégorisation des usagers (élèves, personnel, etc.).
-- **Analyse des trajets** : étude des trajets effectués et de la fréquence d'utilisation des moyens de transport.
-- **Mesure de la satisfaction** : évaluation de l'expérience des utilisateurs à travers des enquêtes.
-- **Propositions d'innovations** : suggérer des améliorations basées sur les données.
+- **Analyse des trajets** : étude des trajets réalisés et des fréquences d'utilisation.
+- **Mesure de la satisfaction** : évaluation des retours d'expérience des utilisateurs.
+- **Propositions d'innovations** : suggestions d'améliorations basées sur les données récoltées.
+
+
+
 
 ---
 
@@ -31,26 +41,57 @@ Les principaux objectifs du projet sont :
 
 ### **2.1. Modèle Conceptuel de Données (MCD)**
 
-Le MCD décrit les principales entités et leurs relations :
-- **Utilisateur** : Informations générales sur les utilisateurs (élèves, personnel).
+>Le MCD permet de **définir les entités et les relations entre elles**. 
+Voici les principales entités de notre étude projet :
+
+- **Utilisateur** : Représente les informations des usagers (élèves, personnel).
 - **Transport** : Type de transport utilisé (TER, BRT, autre).
-- **Station** : Stations desservies.
-- **Trajet** : Détails des trajets.
-- **Enquête** : Réponses aux enquêtes de satisfaction.
+- **Station** : Stations desservies par les moyens de transport.
+- **Trajet** : Trajets réalisés par les utilisateurs.
+- **Enquête** : Réponses aux enquêtes sur la satisfaction des usagers.
 - **Utilisation** : Fréquence d'utilisation des moyens de transport.
 
 ### **2.2. Modèle Logique de Données (MLD)**
 
-Le MLD traduit le MCD dans des tables relationnelles MySQL :
+> Le MLD est la traduction technique du MCD, structuré sous forme de tables relationnelles dans la base de données MySQL. Voici les tables créées et leurs colonnes respectives :
 
-| **Table**      | **Colonnes**                                                                 |
-|----------------|------------------------------------------------------------------------------|
-| **Utilisateur**| `id_utilisateur`, `nom`, `prenom`, `type_utilisateur`, `email`               |
-| **Transport**  | `id_transport`, `nom_transport`, `type_transport`                            |
-| **Station**    | `id_station`, `nom_station`, `localisation`                                  |
-| **Trajet**     | `id_trajet`, `id_utilisateur`, `id_transport`, `id_station_depart`, `id_station_arrivee`, `date_trajet` |
-| **Enquête**    | `id_enquete`, `id_utilisateur`, `satisfaction`, `commentaires`, `date_reponse`|
-| **Utilisation**| `id_utilisation`, `id_utilisateur`, `id_transport`, `frequence_utilisation`  |
+#### **Utilisateur**
+- `id_utilisateur` (PRIMARY KEY)
+- `nom` (VARCHAR)
+- `prenom` (VARCHAR)
+- `type_utilisateur` (ENUM('élève', 'personnel'))
+- `email` (VARCHAR UNIQUE)
+
+#### **Transport**
+- `id_transport` (PRIMARY KEY)
+- `nom_transport` (ENUM('TER', 'BRT', 'Autre'))
+- `type_transport` (VARCHAR)
+
+#### **Station**
+- `id_station` (PRIMARY KEY)
+- `nom_station` (VARCHAR)
+- `localisation` (VARCHAR)
+
+#### **Trajet**
+- `id_trajet` (PRIMARY KEY)
+- `id_utilisateur` (FOREIGN KEY)
+- `id_transport` (FOREIGN KEY)
+- `id_station_depart` (FOREIGN KEY)
+- `id_station_arrivee` (FOREIGN KEY)
+- `date_trajet` (DATETIME)
+
+#### **Enquête**
+- `id_enquete` (PRIMARY KEY)
+- `id_utilisateur` (FOREIGN KEY)
+- `satisfaction` (INT)
+- `commentaires` (TEXT)
+- `date_reponse` (DATE)
+
+#### **Utilisation**
+- `id_utilisation` (PRIMARY KEY)
+- `id_utilisateur` (FOREIGN KEY)
+- `id_transport` (FOREIGN KEY)
+- `frequence_utilisation` (ENUM('quotidienne', 'hebdomadaire', 'mensuelle'))
 
 ---
 
@@ -398,6 +439,51 @@ LIMIT 5;
 SELECT Transport.nom_transport, AVG(Enquete.satisfaction) AS satisfaction_moyenne
 FROM Enquete
 JOIN Trajet ON Enquete.id_utilisateur = Trajet.id_utilisateur
+JOIN Transport ON Trajet.id_transport = Transport.id_transport
+GROUP BY Transport.nom_transport;
+```
+
+
+### **Répartition des trajets dans le temps (fréquence par mois)** :
+sql
+
+SELECT MONTH(date_trajet) AS mois, COUNT(*) AS nombre_trajets
+FROM Trajet
+GROUP BY mois
+ORDER BY mois;
+### **Répartition des trajets par type d'utilisateur et type de transport** : 
+sql
+
+SELECT Utilisateur.type_utilisateur, Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
+FROM Utilisateur
+JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
+JOIN Transport ON Trajet.id_transport = Transport.id_transport
+GROUP BY Utilisateur.type_utilisateur, Transport.nom_transport;
+### **Nombre moyen de trajets par utilisateur** :
+
+```sql
+SELECT AVG(nombre_trajets) AS moyenne_trajets_par_utilisateur
+FROM (
+    SELECT COUNT(Trajet.id_trajet) AS nombre_trajets
+    FROM Trajet
+    GROUP BY Trajet.id_utilisateur
+) AS sous_requete;
+```
+
+### **Trajets récents (effectués dans les 30 derniers jours)** : 
+```sql
+SELECT Utilisateur.nom, Utilisateur.prenom, Trajet.date_trajet
+FROM Utilisateur
+JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
+WHERE Trajet.date_trajet >= CURDATE() - INTERVAL 30 DAY
+ORDER BY Trajet.date_trajet DESC;
+```
+
+### **Pourcentage d'utilisation des différents moyens de transport** : 
+```sql
+SELECT Transport.nom_transport,
+       (COUNT(Trajet.id_trajet) / (SELECT COUNT(*) FROM Trajet) * 100) AS pourcentage_utilisation
+FROM Trajet
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Transport.nom_transport;
 ```
