@@ -445,22 +445,24 @@ GROUP BY Transport.nom_transport;
 
 
 ### **Répartition des trajets dans le temps (fréquence par mois)** :
-sql
 
+```sql
 SELECT MONTH(date_trajet) AS mois, COUNT(*) AS nombre_trajets
 FROM Trajet
 GROUP BY mois
 ORDER BY mois;
-### **Répartition des trajets par type d'utilisateur et type de transport** : 
-sql
+```
 
+### **Répartition des trajets par type d'utilisateur et type de transport** : 
+```sql
 SELECT Utilisateur.type_utilisateur, Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
 FROM Utilisateur
 JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
 JOIN Transport ON Trajet.id_transport = Transport.id_transport
 GROUP BY Utilisateur.type_utilisateur, Transport.nom_transport;
-### **Nombre moyen de trajets par utilisateur** :
+```
 
+### **Nombre moyen de trajets par utilisateur** :
 ```sql
 SELECT AVG(nombre_trajets) AS moyenne_trajets_par_utilisateur
 FROM (
