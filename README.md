@@ -33,8 +33,6 @@ Au delà de **rendre compte de notre travail de recherche et d'enquete**, l'obje
 - **Propositions d'innovations** : suggestions d'améliorations basées sur les données récoltées.
 
 
-
-
 ---
 
 ## **2. Modélisation des Données**
@@ -402,7 +400,7 @@ CREATE TABLE IF NOT EXISTS Utilisation (
 
 ### **4.1. Requêtes SQL pour l'Analyse des Données**
 
-Voici une série de requêtes SQL pour analyser les données de la base de données :
+> Voici une série de **requêtes SQL qui vont nous permettre d'analyser les données de la base et d'en extraire des informations utiles pour l'entreprise :
 
 ### **Nombre total d'utilisateurs par type (élève ou personnel)** :
 ```sql
@@ -497,12 +495,10 @@ GROUP BY Transport.nom_transport;
 Les résultats de l'analyse ont permis de mettre en lumière plusieurs tendances :
 
 1. **Profil des utilisateurs** : Environ 60% des usagers sont des élèves, et 40% sont du personnel.
-2. **Fréquence d'utilisation** : Le TER est le transport le plus utilisé quotidiennement
-
-, suivi du BRT.
+2. **Fréquence d'utilisation** : Le TER est le transport le plus utilisé quotidiennement, suivi du BRT.
 3. **Satisfaction** : Le TER affiche une satisfaction moyenne de 7/10, tandis que le BRT a une satisfaction moyenne de 6/10.
 
-Ces données offrent une vue d'ensemble sur l'utilisation des transports à Dakar et mettent en évidence des axes d'amélioration.
+> Ces données offrent **une vue d'ensemble** sur **l'utilisation des transports à Dakar** et mettent en évidence **des axes d'amélioration**.
 
 ---
 
