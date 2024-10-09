@@ -1,9 +1,3 @@
-Je comprends ! Voici la version **complète** du README.md avec **toutes** les requêtes d'analyse SQL ajoutées correctement à la section dédiée. J'ai aussi conservé le style dynamique et clair, tout en gardant un focus technique pour l'utilisateur expert et compréhensible pour les non-initiés.
-
----
-
-
-
 ## **3. Implémentation Technique**
 
 ### **3.1. Connexion à MySQL avec Python et Insertion de Données**

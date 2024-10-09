@@ -7,8 +7,7 @@
 
 ## Sommaire
 
-1. [Fiche Technique](#fiche-technique)
-2. [Les Auteurs](#les-auteurs)
+1. [Les Auteurs](#les-auteurs)
 3. [Objectifs](#1.1.-Objectifs)
 4. [Modélisation des Données](#Modélisation-des-données)
    - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
@@ -101,6 +100,7 @@ Voici les principales entités de notre étude projet :
 > Le code Python suivant permet de **se connecter à la base de données MySQL et d'insérer des données factices :**
 
 ```python
+import PASSWORD
 import mysql.connector
 from random import choice, randint
 from faker import Faker
@@ -126,7 +126,7 @@ noms_famille = [
 db = mysql.connector.connect(
     host="localhost",
     user="root",       # Remplacer par votre utilisateur MySQL
-    password="110705",  # Remplacer par votre mot de passe MySQL
+    password="password",  # Remplacer par votre mot de passe MySQL
     database="isja_transport"       # Nom de la base de données
 )
 

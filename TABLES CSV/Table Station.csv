@@ -1,5 +1,11 @@
-id_station ,nom_station              ,localisation
-         1 ,"Gare de Dakar"          ,Dakar
-         2 ,"Gare de Diamniadio"     ,Diamniadio
-         3 ,"Station BRT Liberté 5"  ,Dakar
-         4 ,"Station BRT Guédiawaye" ,Guédiawaye
+id_station,nom_station,localisation
+1,"Gare de Dakar",Dakar
+2,"Gare de Diamniadio",Diamniadio
+3,"Station BRT Liberté 5",Dakar
+4,"Station BRT Guédiawaye",Guédiawaye
+5,"Gare de Colobane",Colobane
+6,"Gare de Hann",Hann
+7,"Gare de Dalifort",Dalifort
+8,"Gare de Pikine",Pikine
+9,"Gare de Thiaroye",Thiaroye
+10,"Station BRT Collége sacré cœur ","Sacré coeur"
