@@ -1,6 +1,7 @@
 import mysql.connector
 from random import choice, randint
 from faker import Faker
+from PASSWORD import password
 
 # Initialiser Faker pour générer des données factices en français
 fake = Faker('fr_FR')
@@ -23,15 +24,15 @@ noms_famille = [
 db = mysql.connector.connect(
     host="localhost",
     user="root",       # Remplacer par votre utilisateur MySQL
-    password="110705",  # Remplacer par votre mot de passe MySQL
-    database="isja_transport"       # Nom de la base de données
+    password= password,  # Remplacer par votre mot de passe MySQL
+    database="sen_trans_test"       # Nom de la base de données
 )
 
 cursor = db.cursor()
 
 # Création de la base de données si elle n'existe pas
-cursor.execute("CREATE DATABASE IF NOT EXISTS isja_transport;")
-cursor.execute("USE isja_transport;")
+cursor.execute("CREATE DATABASE IF NOT EXISTS sen_trans_test;")
+cursor.execute("USE sen_trans_test;")
 
 # Création des tables
 
@@ -41,7 +42,7 @@ cursor.execute('''
         id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
         nom VARCHAR(50) NOT NULL,
         prenom VARCHAR(50) NOT NULL,
-        type_utilisateur ENUM('élève', 'personnel') NOT NULL,
+        type_utilisateur VARCHAR(100) NOT NULL,
         email VARCHAR(100) NOT NULL UNIQUE
     );
 ''')
@@ -50,7 +51,7 @@ cursor.execute('''
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS Transport (
         id_transport INT AUTO_INCREMENT PRIMARY KEY,
-        nom_transport ENUM('TER', 'BRT', 'Autre') NOT NULL,
+        nom_transport VARCHAR(100) NOT NULL,
         type_transport VARCHAR(50) NOT NULL
     );
 ''')
@@ -113,6 +114,8 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
     transports = [
         ('TER', 'ferroviaire'),
         ('BRT', 'routier'),
+        ('Taxi', 'routier'),
+        ('Bus DemDikk', 'routier'),
         ('Autre', 'divers')
     ]
     cursor.executemany('''
@@ -131,6 +134,12 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
         ('Gare de Diamniadio', 'Diamniadio'),
         ('Station BRT Liberté 5', 'Dakar'),
         ('Station BRT Guédiawaye', 'Guédiawaye'),
+        ('Gare de Colobane', 'Colobane'),
+        ('Gare de Hann', 'Hann'),
+        ('Gare de Dalifort', 'Dalifort'),
+        ('Gare de Pikine ', 'Pikine'),
+        ('Gare de Thiaroye', 'Thiaroye'),
+        ('Station BRT Collège Sacré Coeur', 'Sacré Coeur')
         # Ajouter d'autres stations si nécessaire
     ]
     cursor.executemany('''
@@ -159,7 +168,7 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
             continue  # Si l'utilisateur existe déjà, on passe à la suivante
         utilisateurs_existe.add(utilisateur_unique)
 
-        type_utilisateur = choice(['élève', 'personnel'])
+        type_utilisateur = choice(['élève', 'personnel', 'professeur'])
 
         # Insérer l'utilisateur
         cursor.execute('''
@@ -181,24 +190,13 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
         ''', (id_utilisateur, id_transport, frequence_utilisation))
         db.commit()
 
-        # Insérer une réponse à l'enquête
-        satisfaction = randint(1, 10)
-        commentaires = f"J'ai apprécié mon trajet en {choice(['TER', 'BRT'])}."  # Commentaire plus cohérent
-        date_reponse = fake.date_between(start_date='-1y', end_date='today')
-
-        cursor.execute('''
-            INSERT INTO Enquete (id_utilisateur, satisfaction, commentaires, date_reponse)
-            VALUES (%s, %s, %s, %s)
-        ''', (id_utilisateur, satisfaction, commentaires, date_reponse))
-        db.commit()
-
         # Générer des trajets
         for _ in range(randint(1, 5)):
             id_station_depart = choice(stations_ids)
             id_station_arrivee = choice(stations_ids)
             while id_station_arrivee == id_station_depart:
                 id_station_arrivee = choice(stations_ids)
-            date_trajet = fake.date_time_between(start_date='-2y', end_date='now')
+            date_trajet = fake.date_time_between(start_date='-1y', end_date='now')
 
             cursor.execute('''
                 INSERT INTO Trajet (id_utilisateur, id_transport, id_station_depart, id_station_arrivee, date_trajet)
