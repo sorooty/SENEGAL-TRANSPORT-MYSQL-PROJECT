@@ -5,7 +5,9 @@
 
 ---
 
-## Sommaire
+## **Introduction**
+
+### Sommaire
 
 1. [Les Auteurs](#les-auteurs)
 2. [Objectifs](#1.1-Objectifs)
@@ -402,6 +404,99 @@ CREATE TABLE IF NOT EXISTS Utilisation (
 
 ---
 
+## **4. Analyse et Interprétation des Données**
+
+### **4.1. Requêtes SQL pour l'Analyse des Données**
+
+> Voici une série de **requêtes SQL qui vont nous permettre d'analyser les données de la base et d'en extraire des informations utiles pour l'entreprise :
+
+### **Nombre total d'utilisateurs par type (élève ou personnel)** :
+```sql
+SELECT type_utilisateur, COUNT(*) AS nombre_utilisateurs
+FROM Utilisateur
+GROUP BY type_utilisateur;
+```
+### **Nombre total de trajets effectués par chaque utilisateur** :
+```sql
+SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
+FROM Utilisateur
+LEFT JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
+GROUP BY Utilisateur.id_utilisateur;
+```
+
+### **Répartition des transports utilisés** :
+```sql
+SELECT Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
+FROM Trajet
+JOIN Transport ON Trajet.id_transport = Transport.id_transport
+GROUP BY Transport.nom_transport;
+```
+### **Top 5 des utilisateurs les plus actifs** :
+```sql
+SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Trajet.id_trajet) AS nombre_trajets
+FROM Utilisateur
+JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
+GROUP BY Utilisateur.id_utilisateur
+ORDER BY nombre_trajets DESC
+LIMIT 5;
+```
+### **Satisfaction moyenne par type de transport** :
+```sql
+SELECT Transport.nom_transport, AVG(Enquete.satisfaction) AS satisfaction_moyenne
+FROM Enquete
+JOIN Trajet ON Enquete.id_utilisateur = Trajet.id_utilisateur
+JOIN Transport ON Trajet.id_transport = Transport.id_transport
+GROUP BY Transport.nom_transport;
+```
+
+
+### **Répartition des trajets dans le temps (fréquence par mois)** :
+
+```sql
+SELECT MONTH(date_trajet) AS mois, COUNT(*) AS nombre_trajets
+FROM Trajet
+GROUP BY mois
+ORDER BY mois;
+```
+
+### **Répartition des trajets par type d'utilisateur et type de transport** : 
+```sql
+SELECT Utilisateur.type_utilisateur, Transport.nom_transport, COUNT(Trajet.id_trajet) AS nombre_trajets
+FROM Utilisateur
+JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
+JOIN Transport ON Trajet.id_transport = Transport.id_transport
+GROUP BY Utilisateur.type_utilisateur, Transport.nom_transport;
+```
+
+### **Nombre moyen de trajets par utilisateur** :
+```sql
+SELECT AVG(nombre_trajets) AS moyenne_trajets_par_utilisateur
+FROM (
+    SELECT COUNT(Trajet.id_trajet) AS nombre_trajets
+    FROM Trajet
+    GROUP BY Trajet.id_utilisateur
+) AS sous_requete;
+```
+
+### **Trajets récents (effectués dans les 30 derniers jours)** : 
+```sql
+SELECT Utilisateur.nom, Utilisateur.prenom, Trajet.date_trajet
+FROM Utilisateur
+JOIN Trajet ON Utilisateur.id_utilisateur = Trajet.id_utilisateur
+WHERE Trajet.date_trajet >= CURDATE() - INTERVAL 30 DAY
+ORDER BY Trajet.date_trajet DESC;
+```
+
+### **Pourcentage d'utilisation des différents moyens de transport** : 
+```sql
+SELECT Transport.nom_transport,
+       (COUNT(Trajet.id_trajet) / (SELECT COUNT(*) FROM Trajet) * 100) AS pourcentage_utilisation
+FROM Trajet
+JOIN Transport ON Trajet.id_transport = Transport.id_transport
+GROUP BY Transport.nom_transport;
+```
+
+---
 
 ## **5. Résultats et Interprétation** 
 
@@ -538,5 +633,3 @@ Le projet **SEN-TRANSPORT** a mis en lumière l’importance des données dans l
 - [Conclusion](#conclusion)
 
 ---
-
-Cette version révisée contient des explications détaillées pour chaque requête SQL, des exemples d'applications concrètes, ainsi qu'une analyse plus approfondie des résultats et des propositions d'améliorations qui répondent aux critères de notation de ton projet.
