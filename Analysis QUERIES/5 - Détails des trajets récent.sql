@@ -4,5 +4,5 @@ SELECT Utilisateur.nom, Utilisateur.prenom, Trajet.date_trajet, Station.nom_stat
 FROM Trajet
 JOIN Utilisateur ON Trajet.id_utilisateur = Utilisateur.id_utilisateur
 JOIN Station ON Trajet.id_station_depart = Station.id_station
-WHERE Trajet.date_trajet >= CURDATE() - INTERVAL 30 DAY
+WHERE Trajet.date_trajet >= CURDATE() - INTERVAL 60 DAY
 ORDER BY Trajet.date_trajet DESC;

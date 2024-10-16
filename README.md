@@ -48,7 +48,7 @@ Voici les principales entités de notre étude projet :
 - **Station** : Stations desservies par les moyens de transport.
 - **Trajet** : Trajets réalisés par les utilisateurs.
 - **Enquête** : Réponses aux enquêtes sur la satisfaction des usagers.
-- **Utilisation** : Fréquence d'utilisation des moyens de transport.
+
 
 ### **2.2. Modèle Logique de Données (MLD)**
 
@@ -86,11 +86,6 @@ Voici les principales entités de notre étude projet :
 - `commentaires` (TEXT)
 - `date_reponse` (DATE)
 
-#### **Utilisation**
-- `id_utilisation` (PRIMARY KEY)
-- `id_utilisateur` (FOREIGN KEY)
-- `id_transport` (FOREIGN KEY)
-- `frequence_utilisation` (ENUM('quotidienne', 'hebdomadaire', 'mensuelle'))
 
 ---
 
@@ -388,19 +383,6 @@ CREATE TABLE IF NOT EXISTS Enquete (
 >###  **Affichage de la table :**
 ![Affichage](./imgs/imageEnquete.png)
 
-```sql
-CREATE TABLE IF NOT EXISTS Utilisation (
-    id_utilisation INT AUTO_INCREMENT PRIMARY KEY,
-    id_utilisateur INT NOT NULL,
-    id_transport INT NOT NULL,
-    frequence_utilisation ENUM('quotidienne', 'hebdomadaire', 'mensuelle') NOT NULL,
-    FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
-    FOREIGN KEY (id_transport) REFERENCES Transport(id_transport)
-);
-``` 
-
->###  **Affichage de la table :**
-![Affichage](./imgs/imageUtilisation.png)
 
 ---
 

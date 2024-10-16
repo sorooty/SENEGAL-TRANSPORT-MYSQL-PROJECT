@@ -24,8 +24,8 @@ noms_famille = [
 db = mysql.connector.connect(
     host="localhost",
     user="root",       # Remplacer par votre utilisateur MySQL
-    password= password,  # Remplacer par votre mot de passe MySQL
-    database="sen_trans_test"       # Nom de la base de données
+    password= password,  # Le mot de passe d'accès à ma base de données
+    database="sen_trans_test" # Nom de la base de données
 )
 
 cursor = db.cursor()
@@ -36,7 +36,7 @@ cursor.execute("USE sen_trans_test;")
 
 # Création des tables
 
-# Table Utilisateur (anciennement Personne)
+# Table Utilisateur 
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS Utilisateur (
         id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,

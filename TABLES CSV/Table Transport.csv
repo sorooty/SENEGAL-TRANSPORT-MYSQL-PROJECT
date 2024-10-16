@@ -1,6 +1,6 @@
-id_transport ,nom_transport ,type_transport
-           1 ,TER           ,ferroviaire
-           2 ,BRT           ,routier
-           3 ,Taxi          ,routier
-           4 ,"Bus DemDikk" ,routier
-           5 ,Autres        ,divers
+id_transport,nom_transport,type_transport
+1,TER,ferroviaire
+2,BRT,routier
+3,Taxi,routier
+4,"Bus DemDikk",routier
+5,Autres,divers
