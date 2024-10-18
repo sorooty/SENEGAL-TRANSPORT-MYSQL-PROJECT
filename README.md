@@ -196,18 +196,6 @@ cursor.execute('''
     );
 ''')
 
-# Table Utilisation
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS Utilisation (
-        id_utilisation INT AUTO_INCREMENT PRIMARY KEY,
-        id_utilisateur INT NOT NULL,
-        id_transport INT NOT NULL,
-        frequence_utilisation ENUM('quotidienne', 'hebdomadaire', 'mensuelle') NOT NULL,
-        FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
-        FOREIGN KEY (id_transport) REFERENCES Transport(id_transport)
-    );
-''')
-
 db.commit()
 
 # Insérer des données factices
@@ -279,13 +267,6 @@ def inserer_donnees_factices(nb_utilisateurs=40):  # Augmentation à 40 utilisat
         # Choisir un transport aléatoirement
         id_transport = choice(transports_ids)
         frequence_utilisation = choice(fréquences)
-
-        # Insérer dans Utilisation
-        cursor.execute('''
-            INSERT INTO Utilisation (id_utilisateur, id_transport, frequence_utilisation)
-            VALUES (%s, %s, %s)
-        ''', (id_utilisateur, id_transport, frequence_utilisation))
-        db.commit()
 
         # Insérer une réponse à l'enquête
         satisfaction = randint(1, 10)
