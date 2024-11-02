@@ -12,7 +12,7 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
 
-    1.1. Objectifs
+1.1. Objectifs
 
 1. Modélisation des Données
     
@@ -38,7 +38,7 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 ---
 
-## Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
+## 1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
 
 Dans le cadre de notre projet de digitalisation et d'optimisation des données des usagers du TER et du BRT au sein de l’établissement, il est essentiel de bien comprendre les principes des bases de données relationnelles et les concepts fondamentaux associés. **Cette section présente les notions de base qui sont au cœur de la structuration, de la gestion et de l’analyse des données dans notre projet.**
 
@@ -145,7 +145,7 @@ Voici les principales **entités de notre étude projet** :
 
 ### **Utilisateur**
 
-- **`id_utilisateur :`** INT (Clé Primaire)
+- `id_utilisateur :` INT (Clé Primaire)
 - `nom :` VARCHAR(50)
 - `prenom :` VARCHAR(50)
 - `type_utilisateur :` VARCHAR(50)
@@ -153,7 +153,7 @@ Voici les principales **entités de notre étude projet** :
 
 ### **Transport**
 
-- **`id_transport :`** INT (Clé Primaire)
+- `id_transport :` INT (Clé Primaire)
 - `nom_transport:` VARCHAR(50)
 - `type_transport :` VARCHAR(100)
 
@@ -179,20 +179,20 @@ Voici les principales **entités de notre étude projet** :
 ## Relations
 
 1. `UTILISATEUR - TRAJET`
-    - Un UTILISATEUR peut effectuer plusieurs TRAJETS
-    - Un TRAJET est effectué par un seul UTILISATEUR
+    - Un **UTILISATEUR** peut effectuer plusieurs **TRAJETS**
+    - Un **TRAJET** est effectué par un seul **UTILISATEUR**
 2. `TRAJET - TRANSPORT`
-    - Un TRAJET utilise un seul TRANSPORT
-    - Un TRANSPORT peut être utilisé dans plusieurs TRAJETS
+    - Un **TRAJET** utilise un seul **TRANSPORT**
+    - Un **TRANSPORT** peut être utilisé dans plusieurs **TRAJETS**
 3. `TRAJET - STATION (Départ)`
-    - Un TRAJET a une seule STATION de départ
-    - Une STATION peut être le point de départ de plusieurs TRAJETS
+    - Un **TRAJET** a une seule **STATION** de départ
+    - Une **STATION** peut être le point de départ de plusieurs **TRAJETS**
 4. `TRAJET - STATION (Arrivée)`
-    - Un TRAJET a une seule STATION d'arrivée
-    - Une STATION peut être le point d'arrivée de plusieurs TRAJETS
+    - Un **TRAJET** a une seule **STATION** d'arrivée
+    - Une **STATION** peut être le point d'arrivée de plusieurs **TRAJETS**
 5. `UTILISATEUR - ENQUETE`
-    - Un UTILISATEUR peut répondre à plusieurs ENQUETES
-    - Une ENQUETE est répondue par un seul UTILISATEUR
+    - Un **UTILISATEUR** peut répondre à plusieurs **ENQUETES**
+    - Une **ENQUETE** est répondue par un seul **UTILISATEUR**
 
 ### **Enquête**
 
@@ -228,52 +228,52 @@ CREATE TABLE IF NOT EXISTS Utilisateur (
 
 ### **Affichage de la table en naturel :**
 
-| id_utilisateur  | nom     | prenom     | type_utilisateur  | email |
+| id_utilisateur | nom | prenom | type_utilisateur | email |
 | --- | --- | --- | --- | --- |
-| 1 | Diallo  | Pape       | élève             | pape.diallo714@example.com |
-| 2 | Touré   | Aissatou   | élève             | aissatou.touré987@example.com |
-| 3 | Cissé   | Moussa     | personnel         | moussa.cissé95@example.com |
-| 4 | Gueye   | Aissatou   | élève             | aissatou.gueye833@example.com |
-| 5 | Ndour   | Nafi       | personnel         | nafi.ndour786@example.com |
-| 6 | Bâ      | Amadou     | personnel         | amadou.bâ757@example.com |
-| 7 | Diallo  | Aminata    | élève             | aminata.diallo936@example.com |
-| 8 | Diouf   | Diouf      | élève             | diouf.diouf916@example.com |
-| 9 | Faye    | Astou      | personnel         | astou.faye908@example.com |
-| 10 | Seck    | Coumba     | élève             | coumba.seck853@example.com |
-| 11 | Gueye   | Serigne    | personnel         | serigne.gueye783@example.com |
-| 12 | Diatta  | Mame       | personnel         | mame.diatta927@example.com |
-| 13 | Fall    | Serigne    | élève             | serigne.fall664@example.com |
-| 14 | Mbaye   | Moussa     | élève             | moussa.mbaye242@example.com |
-| 15 | Cissé   | Dieynaba   | élève             | dieynaba.cissé841@example.com |
-| 16 | Ndiaye  | Serigne    | élève             | serigne.ndiaye532@example.com |
-| 17 | Kane    | Moussa     | personnel         | moussa.kane999@example.com |
-| 18 | Kane    | Adama      | élève             | adama.kane148@example.com |
-| 19 | Sy      | Cheikh     | élève             | cheikh.sy356@example.com |
-| 20 | Touré   | Sokhna     | élève             | sokhna.touré108@example.com |
-| 21 | Ka      | Mamadou    | personnel         | mamadou.ka937@example.com |
-| 22 | Sow     | El Hadj | personnel         | el hadj.sow119@example.com |
-| 23 | Diop    | Saliou     | personnel         | saliou.diop173@example.com |
-| 24 | Ka      | Awa        | élève             | awa.ka530@example.com |
-| 25 | Fall    | Tening     | personnel         | tening.fall553@example.com |
-| 26 | Sow     | Moussa     | élève             | moussa.sow828@example.com |
-| 27 | Bâ      | Abdou      | élève             | abdou.bâ145@example.com |
-| 28 | Diatta  | Thierno    | personnel         | thierno.diatta778@example.com |
-| 29 | Diatta  | Pape       | élève             | pape.diatta670@example.com |
-| 30 | Sarr    | Adama      | élève             | adama.sarr499@example.com |
-| 31 | Bâ      | Adama      | personnel         | adama.bâ678@example.com |
-| 32 | Sow     | Serigne    | personnel         | serigne.sow310@example.com |
-| 33 | Touré   | Mariama    | personnel         | mariama.touré13@example.com |
-| 34 | Diouf   | Aissatou   | personnel         | aissatou.diouf107@example.com |
-| 35 | Fall    | Thierno    | personnel         | thierno.fall552@example.com |
-| 36 | Faye    | Alioune    | élève             | alioune.faye215@example.com |
-| 37 | Mbaye   | Mamadou    | personnel         | mamadou.mbaye146@example.com |
-| 38 | Diallo  | Sokhna     | élève             | sokhna.diallo209@example.com |
-| 39 | Touré   | Fatou      | personnel         | fatou.touré987@example.com |
-| 40 | Cissé   | Sokhna     | élève             | sokhna.cissé914@example.com |
+| 1 | Diallo | Pape | élève | pape.diallo714@example.com |
+| 2 | Touré | Aissatou | élève | aissatou.touré987@example.com |
+| 3 | Cissé | Moussa | prof | moussa.cissé95@example.com |
+| 4 | Gueye | Aissatou | élève | aissatou.gueye833@example.com |
+| 5 | Ndour | Nafi | élève | nafi.ndour786@example.com |
+| 6 | Bâ | Amadou | personnel | amadou.bâ757@example.com |
+| 7 | Diallo | Aminata | élève | aminata.diallo936@example.com |
+| 8 | Diouf | Mame Cheikh | prof | diouf.diouf916@example.com |
+| 9 | Faye | Astou | personnel | astou.faye908@example.com |
+| 10 | Seck | Coumba | élève | coumba.seck853@example.com |
+| 11 | Gueye | Serigne | personnel | serigne.gueye783@example.com |
+| 12 | Diatta | Mame | personnel | mame.diatta927@example.com |
+| 13 | Fall | Serigne | prof | serigne.fall664@example.com |
+| 14 | Mbaye | Moussa | élève | moussa.mbaye242@example.com |
+| 15 | Cissé | Dieynaba | élève | dieynaba.cissé841@example.com |
+| 16 | Ndiaye | Serigne | élève | serigne.ndiaye532@example.com |
+| 17 | Kane | Moussa | personnel | moussa.kane999@example.com |
+| 18 | Kane | Adama | élève | adama.kane148@example.com |
+| 19 | Sy | Cheikh | prof | cheikh.sy356@example.com |
+| 20 | Touré | Sokhna | élève | sokhna.touré108@example.com |
+| 21 | Ka | Mamadou | personnel | mamadou.ka937@example.com |
+| 22 | Sow | El Hadj | prof | el hadj.sow119@example.com |
+| 23 | Diop | Saliou | personnel | saliou.diop173@example.com |
+| 24 | Ka | Awa | prof | awa.ka530@example.com |
+| 25 | Fall | Tening | personnel | tening.fall553@example.com |
+| 26 | Sow | Moussa | élève | moussa.sow828@example.com |
+| 27 | Bâ | Abdou | élève | abdou.bâ145@example.com |
+| 28 | Diatta | Thierno | personnel | thierno.diatta778@example.com |
+| 29 | Diatta | Pape | élève | pape.diatta670@example.com |
+| 30 | Sarr | Adama | élève | adama.sarr499@example.com |
+| 31 | Bâ | Adama | personnel | adama.bâ678@example.com |
+| 32 | Sow | Serigne | personnel | serigne.sow310@example.com |
+| 33 | Touré | Mariama | prof | mariama.touré13@example.com |
+| 34 | Diouf | Aissatou | personnel | aissatou.diouf107@example.com |
+| 35 | Fall | Thierno | prof | thierno.fall552@example.com |
+| 36 | Faye | Alioune | élève | alioune.faye215@example.com |
+| 37 | Mbaye | Mamadou | personnel | mamadou.mbaye146@example.com |
+| 38 | Diallo | Sokhna | élève | sokhna.diallo209@example.com |
+| 39 | Touré | Fatou | prof | fatou.touré987@example.com |
+| 40 | Cissé | Sokhna | élève | sokhna.cissé914@example.com |
 
 ### Affichage sur Mysql CommandLine :
 
-![table users.png](table_users.png)
+![table users.png](6b79b594-e8b4-435b-b4fd-6314ed36baa3.png)
 
 ## Table Transport
 
@@ -1014,6 +1014,11 @@ L’analyse des données révèle plusieurs aspects clés de l’utilisation des
     
     > La carte interactive montre **la localisation des principales stations de transport à Dakar**.
     > 
+    > 
+    > ![Capture d'écran 2024-11-02 020811.png](Capture_dcran_2024-11-02_020811.png)
+    > 
+    > ![Capture d'écran 2024-10-31 140317.png](Capture_dcran_2024-10-31_140317.png)
+    > 
     
     Elle permet une **visualisation rapide des zones desservies**, facilitant **l’identification des zones potentiellement sous-desservies** ou nécessitant de nouvelles stations.
     
@@ -1087,9 +1092,13 @@ Sur la base des données analysées, voici quelques suggestions d’amélioratio
 
 ### Conclusion
 
-Ce projet a permis d'explorer les usages des transports publics par les utilisateurs de l'ISJA de Dakar, en focalisant l'analyse sur le TER et le BRT, deux moyens de transport en pleine expansion dans la région. En analysant ces données, nous avons pu dégager des tendances d'utilisation, identifier des points d'amélioration potentiels pour optimiser la desserte des trajets, et fournir des perspectives pour la planification future des infrastructures de transport. L’intégration de bases de données relationnelles, associée à des outils d’analyse comme Power BI, a contribué à une visualisation claire et exploitable des résultats, renforçant la compréhension des habitudes de déplacement.
+Ce projet a permis **d'explorer les usages des transports publics par les utilisateurs de l'ISJA de Dakar, en focalisant l'analyse sur le TER et le BRT**, deux moyens de transport en pleine expansion dans la région.
 
-Les informations obtenues sont précieuses pour les gestionnaires de transport, notamment en vue d’optimiser les flux de voyageurs et de réduire les points de congestion. Ce travail constitue une base pour de futures analyses visant à approfondir la connaissance des comportements des usagers et à renforcer l’efficience des systèmes de transport à Dakar.
+En analysant ces données, nous avons pu **dégager des tendances d'utilisation, identifier des points d'amélioration potentiels pour optimiser la desserte des trajets, et fournir des perspectives** pour la planification future des infrastructures de transport. L’intégration de bases de données relationnelles, associée à des outils d’analyse comme Power BI, a contribué à une visualisation claire et exploitable des résultats, renforçant la compréhension des habitudes de déplacement.
+
+Les informations obtenues sont précieuses pour les gestionnaires de transport, notamment en vue **d’optimiser les flux de voyageurs** et de **réduire les points de congestion**. 
+
+**Ce travail constitue une base pour de futures analyses visant à approfondir la connaissance des comportements des usagers et à renforcer l’efficience des systèmes de transport à Dakar.**
 
 ---
 
@@ -1102,6 +1111,20 @@ Pour mener à bien ce projet, plusieurs outils ont été mobilisés :
 - **Notion** : pour l’organisation, le suivi des tâches et l’élaboration du rapport.
 - **GitHub** : pour le contrôle de version du code et la collaboration sur le projet.
 - **Visual Studio Code (VSCode)** : pour l’édition du code et la création des scripts nécessaires à l’analyse.
+
+### Webographie  / sources :
+
+| Année de publication | Auteur | Titre | Url | Date de consultation |
+| --- | --- | --- | --- | --- |
+| 0 |  | SQL HAVING - SQL | [https://sql.sh/cours/having#google_vignette](https://sql.sh/cours/having#google_vignette) | 23 septembre 2024 23:45 |
+| 0 |  | Google Forms | [https://docs.google.com/forms/u/0/](https://docs.google.com/forms/u/0/) | 23 septembre 2024 23:46 |
+| 0 |  | MySQL Constraints | [https://www.w3schools.com/mysql/mysql_constraints.asp](https://www.w3schools.com/mysql/mysql_constraints.asp) | 23 septembre 2024 23:46 |
+| 0 |  | Train Express Régional - APIX-S.A. | [https://investinsenegal.sn/grand_travaux/train-express-regional/](https://investinsenegal.sn/grand_travaux/train-express-regional/) | 23 septembre 2024 23:48 |
+| 2021 |  | Coût, montage financier, tarifs, rotations, etc : tout sur le TER – Topnews | [https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/](https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/) | 23 septembre 2024 23:49 |
+| 0 |  | Responsabilité numérique des entreprises : enjeux des données, environnementaux et sociaux | France Stratégie | [https://www.strategie.gouv.fr/infographies/responsabilite-numerique-entreprises-enjeux-donnees-environnementaux-sociaux](https://www.strategie.gouv.fr/infographies/responsabilite-numerique-entreprises-enjeux-donnees-environnementaux-sociaux) | 10 octobre 2024 16:01 |
+| 2024 |  | undefinedterdakar.sn | [https://www.terdakar.sn](https://www.terdakar.sn) | 2 novembre 2024 02:05 |
+| 0 |  | Gamme tarifaire | [https://www.sunubrt.sn/titres-et-tarifs/quel-titre-choisir/](https://www.sunubrt.sn/titres-et-tarifs/quel-titre-choisir/) | 2 novembre 2024 02:06 |
+| 0 |  | Coût, montage financier, tarifs, rotations, etc : tout sur le TER – Topnews | [https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/](https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/) | 2 novembre 2024 02:10 |
 
 ---
 
