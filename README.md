@@ -12,21 +12,22 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
 
-1.1. Objectifs
+    1.1. Objectifs
 
-1. Modélisation des Données
+2. Modélisation des Données
     
     2.1. Modèle Conceptuel de Données (MCD)
     
     2.2. Modèle Logique de Données (MLD)
     
-2. Mise en Œuvre Technique : Le Contenu de notre base de données
+3. Mise en Œuvre Technique : Le Contenu de notre base de données
     
     Création des Tables dans MySQL
     
-3. Analyse des Données
-4. Interprétation et résultats
-5. Conclusion
+4. Analyse des Données
+5. Interprétation et résultats
+6. Conclusion
+Annexes
 
 ---
 
