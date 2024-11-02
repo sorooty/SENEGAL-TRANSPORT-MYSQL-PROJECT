@@ -10,24 +10,21 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 ## Sommaire :
 
-1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
-
-    1.1. Objectifs
-
-2. Modélisation des Données
-    
-    2.1. Modèle Conceptuel de Données (MCD)
-    
-    2.2. Modèle Logique de Données (MLD)
-    
-3. Mise en Œuvre Technique : Le Contenu de notre base de données
-    
-    Création des Tables dans MySQL
-    
-4. Analyse des Données
-5. Interprétation et résultats
-6. Conclusion
-- Annexes
+1. [Avant-Propos](#avant-propos)
+2. [Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles](#introduction-aux-concepts-fondamentaux-des-bases-de-données-relationnelles)
+   - [Objectifs](#objectifs)
+3. [Modélisation des Données](#modélisation-des-données)
+   - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
+   - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
+4. [Mise en Œuvre Technique : Contenu de la Base de Données](#mise-en-œuvre-technique--contenu-de-la-base-de-données)
+   - [Création des Tables dans MySQL](#création-des-tables-dans-mysql)
+5. [Analyse des Données](#analyse-des-données)
+6. [Interprétation et Résultats](#interprétation-et-résultats)
+7. [Conclusion et Propositions](#conclusion-et-propositions)
+   - [Propositions d’Amélioration](#propositions-damélioration)
+8. [Outils Utilisés](#outils-utilisés)
+9. [Webographie / Sources](#webographie--sources)
+10. [Crédits](#crédits)
 
 ---
 
@@ -35,7 +32,7 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 - **Seyni Jr. Baldé**, **Ingénieur de Données et chef de projet chez *CES-IT** (créateur du rapport technique)*
 - **Jean Léandre Tiemtoré**,  **Ingénieur en Optimisation et Performance** chez *CES-IT (auteur du rapport courant et de la méthode GAR)*
-- **Sonia Hameg**, **Ingénieur en Conception Technique et RSE** chez *CES-IT (auteur des schéma techniques et de l’insertion de la RSE*
+- **Sonia Hameg**, **Ingénieur en Conception Technique et RSE** chez *CES-IT (auteur des schéma techniques et de l’insertion de la RSE*)
 
 ---
 
