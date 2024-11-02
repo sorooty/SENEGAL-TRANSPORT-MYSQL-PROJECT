@@ -27,7 +27,7 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 4. Analyse des Données
 5. Interprétation et résultats
 6. Conclusion
-Annexes
+- Annexes
 
 ---
 
