@@ -1015,9 +1015,9 @@ L’analyse des données révèle plusieurs aspects clés de l’utilisation des
     > La carte interactive montre **la localisation des principales stations de transport à Dakar**.
     > 
     > 
-    > ![Capture d'écran 2024-11-02 020811.png](Capture_dcran_2024-11-02_020811.png)
+    > ![Capture d'écran 2024-11-02 020811.png](/carte1.png)
     > 
-    > ![Capture d'écran 2024-10-31 140317.png](Capture_dcran_2024-10-31_140317.png)
+    > ![Capture d'écran 2024-10-31 140317.png](/Carte2.png)
     > 
     
     Elle permet une **visualisation rapide des zones desservies**, facilitant **l’identification des zones potentiellement sous-desservies** ou nécessitant de nouvelles stations.
