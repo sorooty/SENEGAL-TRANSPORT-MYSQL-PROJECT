@@ -1,7 +1,5 @@
 # Rapport Technique - Projet 11 “SEN-TRANSPORT” :  Base de données, analyse et interprétation des données
-
 ![Texte alternatif](PPT%20PROJET%2011%20(2).jpg)
-
 ## Avant - Propos :
 
 > Ce rapport, faisant état de **fiche technique**, présente et explique en détail notre travail **analytique pour l’exploitation des données des utilisateurs** des transports publics à Dakar, Sénégal, plus particulièrement du TER et du BRT au sein de l’ISJA de Dakar.
@@ -32,7 +30,7 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 ---
 
-### **Les Auteurs** :
+### **Les membres du cabinet CES-IT** :
 
 - **Seyni Jr. Baldé**, **Ingénieur de Données et chef de projet chez *CES-IT** (créateur du rapport technique)*
 - **Jean Léandre Tiemtoré**,  **Ingénieur en Optimisation et Performance** chez *CES-IT (auteur du rapport courant et de la méthode GAR)*
@@ -1087,13 +1085,32 @@ Sur la base des données analysées, voici quelques suggestions d’amélioratio
 2. **Augmentation de la capacité des stations les plus fréquentées** : Investir dans les infrastructures des stations très fréquentées du TER pour réduire les embouteillages aux heures de pointe.
 3. **Orienter l’analyse sur les tarifs par types de trajet**
 
-### **6.2. Conclusion**
+### Conclusion
 
-Le projet **SEN-TRANSPORT** a mis en lumière l’importance des données dans la gestion des transports publics à Dakar. En exploitant les informations collectées, les sociétés de transport peuvent non seulement améliorer l’expérience des utilisateurs, mais également optimiser leurs opérations. L’analyse des trajets et des comportements des usagers offre des perspectives d’innovation prometteuses pour une meilleure gestion des flux et une réduction des temps d’attente. En continuant d’intégrer la gestion axée sur les résultats (GAR), les décisions prises pourront être basées sur des données objectives et en temps réel, améliorant ainsi l’efficacité du système de transport.
+Ce projet a permis d'explorer les usages des transports publics par les utilisateurs de l'ISJA de Dakar, en focalisant l'analyse sur le TER et le BRT, deux moyens de transport en pleine expansion dans la région. En analysant ces données, nous avons pu dégager des tendances d'utilisation, identifier des points d'amélioration potentiels pour optimiser la desserte des trajets, et fournir des perspectives pour la planification future des infrastructures de transport. L’intégration de bases de données relationnelles, associée à des outils d’analyse comme Power BI, a contribué à une visualisation claire et exploitable des résultats, renforçant la compréhension des habitudes de déplacement.
+
+Les informations obtenues sont précieuses pour les gestionnaires de transport, notamment en vue d’optimiser les flux de voyageurs et de réduire les points de congestion. Ce travail constitue une base pour de futures analyses visant à approfondir la connaissance des comportements des usagers et à renforcer l’efficience des systèmes de transport à Dakar.
 
 ---
 
-> (Rajouter remerciements, table des matières, outils utilisés, ressources, etc….) en bas >>
+### Outils Utilisés
+
+Pour mener à bien ce projet, plusieurs outils ont été mobilisés :
+
+- **MySQL Workbench et MySQL Commandline** : pour la gestion et la manipulation des données dans la base de données.
+- **Power BI** : pour la création de visualisations et l’analyse des données.
+- **Notion** : pour l’organisation, le suivi des tâches et l’élaboration du rapport.
+- **GitHub** : pour le contrôle de version du code et la collaboration sur le projet.
+- **Visual Studio Code (VSCode)** : pour l’édition du code et la création des scripts nécessaires à l’analyse.
+
+---
+
+### Crédits
+
+> **Auteur du rapport technique** : Seyni Jr. Baldé, Ingénieur de données
+> 
+> 
+> Responsable de la conception, de la recherche et de la maintenance de la base de données pour le projet **"SEN-TRANSPORT”.**
 > 
 
 ---
