@@ -1,0 +1,11 @@
+id_utilisateur,nom,prenom,type_utilisateur,nombre_trajets
+13,Fall,Serigne,prof,5
+2,Touré,Aissatou,élève,5
+3,Cissé,Moussa,prof,5
+34,Diouf,Aissatou,personnel,5
+24,Ka,Awa,prof,5
+7,Diallo,Aminata,élève,5
+23,Diop,Saliou,personnel,5
+29,Diatta,Pape,élève,5
+35,Fall,Thierno,prof,5
+10,Seck,Coumba,élève,4

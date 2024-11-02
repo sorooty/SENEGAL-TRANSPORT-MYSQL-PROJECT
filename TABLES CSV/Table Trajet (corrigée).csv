@@ -1,0 +1,130 @@
+id_trajet,id_utilisateur,id_transport,id_station_depart,id_station_arrivee,date_trajet,nom_lieu_depart,nom_lieu_arrivee,heure_depart,heure_arrivee
+1,1,2,4,10,"2023-07-10 21:52:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",21:52:00,22:37:00
+2,2,2,4,3,"2024-12-28 02:42:00","Station BRT Guédiawaye","Station BRT Liberté 5",02:42:00,03:27:00
+3,2,1,15,1,"2024-02-03 14:18:00","Gare de Mbao","Gare de Dakar",14:18:00,14:48:00
+4,2,2,4,3,"2024-07-03 03:59:00","Station BRT Guédiawaye","Station BRT Liberté 5",03:59:00,04:44:00
+5,2,2,4,13,"2023-10-21 00:59:00","Station BRT Guédiawaye","Station BRT Grand Yoff",00:59:00,01:44:00
+6,2,1,1,5,"2024-09-17 01:53:00","Gare de Dakar","Gare de Colobane",01:53:00,02:23:00
+7,3,2,10,3,"2024-03-19 15:53:00","Station BRT Collège Sacré-Cœur","Station BRT Liberté 5",15:53:00,16:38:00
+8,3,2,10,4,"2023-11-30 08:33:00","Station BRT Collège Sacré-Cœur","Station BRT Guédiawaye",08:33:00,09:18:00
+9,3,1,1,14,"2023-02-21 01:02:00","Gare de Dakar","Gare de Bargny",01:02:00,01:32:00
+10,3,2,4,3,"2023-06-30 20:51:00","Station BRT Guédiawaye","Station BRT Liberté 5",20:51:00,21:36:00
+11,3,2,3,4,"2024-11-28 11:03:00","Station BRT Liberté 5","Station BRT Guédiawaye",11:03:00,11:48:00
+12,4,1,1,2,"2024-06-08 10:00:00","Gare de Dakar","Gare de Diamniadio",10:00:00,10:30:00
+13,4,2,3,12,"2024-05-31 19:34:00","Station BRT Liberté 5","Station BRT Grand Médine",19:34:00,20:19:00
+14,4,2,3,4,"2023-06-30 17:50:00","Station BRT Liberté 5","Station BRT Guédiawaye",17:50:00,18:35:00
+15,4,1,2,6,"2024-04-02 22:17:00","Gare de Diamniadio","Gare de Hann",22:17:00,22:47:00
+16,5,2,3,4,"2024-01-16 11:10:00","Station BRT Liberté 5","Station BRT Guédiawaye",11:10:00,11:55:00
+17,5,2,3,13,"2024-04-25 11:45:00","Station BRT Liberté 5","Station BRT Grand Yoff",11:45:00,12:30:00
+18,5,1,1,14,"2024-02-08 03:46:00","Gare de Dakar","Gare de Bargny",03:46:00,04:16:00
+19,5,2,4,12,"2023-10-11 09:59:00","Station BRT Guédiawaye","Station BRT Grand Médine",09:59:00,10:44:00
+20,6,2,4,3,"2023-03-15 23:12:00","Station BRT Guédiawaye","Station BRT Liberté 5",23:12:00,23:57:00
+21,6,1,2,14,"2024-02-09 21:00:00","Gare de Diamniadio","Gare de Bargny",21:00:00,21:30:00
+22,7,2,4,3,"2024-04-27 06:19:00","Station BRT Guédiawaye","Station BRT Liberté 5",06:19:00,07:04:00
+23,7,2,3,10,"2024-09-26 06:06:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",06:06:00,06:51:00
+24,7,1,2,8,"2024-01-27 08:06:00","Gare de Diamniadio","Gare de Pikine",08:06:00,08:36:00
+25,7,2,4,10,"2024-01-23 01:58:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",01:58:00,02:43:00
+26,7,2,3,4,"2024-10-24 22:26:00","Station BRT Liberté 5","Station BRT Guédiawaye",22:26:00,23:11:00
+27,8,1,2,9,"2023-08-26 07:28:00","Gare de Diamniadio","Gare de Thiaroye",07:28:00,07:58:00
+28,8,2,4,3,"2024-01-27 05:33:00","Station BRT Guédiawaye","Station BRT Liberté 5",05:33:00,06:18:00
+29,8,2,4,10,"2023-02-25 17:21:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",17:21:00,18:06:00
+30,9,1,6,1,"2024-03-31 01:24:00","Gare de Hann","Gare de Dakar",01:24:00,01:54:00
+31,10,2,3,4,"2024-09-09 18:34:00","Station BRT Liberté 5","Station BRT Guédiawaye",18:34:00,19:19:00
+32,10,2,4,3,"2024-08-19 22:19:00","Station BRT Guédiawaye","Station BRT Liberté 5",22:19:00,23:04:00
+33,10,1,6,1,"2024-03-03 22:54:00","Gare de Hann","Gare de Dakar",22:54:00,23:24:00
+34,10,2,10,4,"2024-06-28 06:45:00","Station BRT Collège Sacré-Cœur","Station BRT Guédiawaye",06:45:00,07:30:00
+35,11,2,4,3,"2024-07-17 10:40:00","Station BRT Guédiawaye","Station BRT Liberté 5",10:40:00,11:25:00
+36,11,1,2,1,"2024-03-05 20:46:00","Gare de Diamniadio","Gare de Dakar",20:46:00,21:16:00
+37,11,2,4,3,"2023-05-11 03:10:00","Station BRT Guédiawaye","Station BRT Liberté 5",03:10:00,03:55:00
+38,11,2,4,10,"2023-07-22 03:21:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",03:21:00,04:06:00
+39,12,1,1,2,"2023-08-14 15:19:00","Gare de Dakar","Gare de Diamniadio",15:19:00,15:49:00
+40,12,2,3,13,"2023-07-14 02:58:00","Station BRT Liberté 5","Station BRT Grand Yoff",02:58:00,03:43:00
+41,12,2,3,12,"2024-09-05 00:45:00","Station BRT Liberté 5","Station BRT Grand Médine",00:45:00,01:30:00
+42,12,1,7,2,"2024-12-28 17:38:00","Gare de Dalifort","Gare de Diamniadio",17:38:00,18:08:00
+43,13,2,4,13,"2023-01-24 20:04:00","Station BRT Guédiawaye","Station BRT Grand Yoff",20:04:00,20:49:00
+44,13,2,3,4,"2024-05-25 06:09:00","Station BRT Liberté 5","Station BRT Guédiawaye",06:09:00,06:54:00
+45,13,1,2,5,"2023-01-21 14:14:00","Gare de Diamniadio","Gare de Colobane",14:14:00,14:44:00
+46,13,2,4,3,"2023-07-04 06:46:00","Station BRT Guédiawaye","Station BRT Liberté 5",06:46:00,07:31:00
+47,13,2,10,3,"2023-09-30 12:31:00","Station BRT Collège Sacré-Cœur","Station BRT Liberté 5",12:31:00,13:16:00
+48,14,1,1,15,"2023-02-04 15:08:00","Gare de Dakar","Gare de Mbao",15:08:00,15:38:00
+49,14,2,3,10,"2024-06-07 20:43:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",20:43:00,21:28:00
+50,14,2,3,12,"2023-03-11 06:12:00","Station BRT Liberté 5","Station BRT Grand Médine",06:12:00,06:57:00
+51,14,1,5,1,"2023-05-11 18:41:00","Gare de Colobane","Gare de Dakar",18:41:00,19:11:00
+52,15,2,4,10,"2024-06-04 18:20:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",18:20:00,19:05:00
+53,15,2,3,4,"2023-06-11 01:44:00","Station BRT Liberté 5","Station BRT Guédiawaye",01:44:00,02:29:00
+54,16,1,15,1,"2023-11-30 06:57:00","Gare de Mbao","Gare de Dakar",06:57:00,07:27:00
+55,16,2,4,3,"2024-04-02 03:16:00","Station BRT Guédiawaye","Station BRT Liberté 5",03:16:00,04:01:00
+56,16,2,4,3,"2024-05-02 06:36:00","Station BRT Guédiawaye","Station BRT Liberté 5",06:36:00,07:21:00
+57,16,1,2,6,"2023-12-08 19:11:00","Gare de Diamniadio","Gare de Hann",19:11:00,19:41:00
+58,17,2,3,4,"2023-10-16 10:51:00","Station BRT Liberté 5","Station BRT Guédiawaye",10:51:00,11:36:00
+59,17,2,4,12,"2023-01-26 21:00:00","Station BRT Guédiawaye","Station BRT Grand Médine",21:00:00,21:45:00
+60,17,1,2,1,"2023-04-20 11:13:00","Gare de Diamniadio","Gare de Dakar",11:13:00,11:43:00
+61,18,2,3,13,"2024-11-30 02:34:00","Station BRT Liberté 5","Station BRT Grand Yoff",02:34:00,03:19:00
+62,19,2,3,4,"2024-03-14 00:34:00","Station BRT Liberté 5","Station BRT Guédiawaye",00:34:00,01:19:00
+63,19,1,2,6,"2023-02-15 20:42:00","Gare de Diamniadio","Gare de Hann",20:42:00,21:12:00
+64,20,2,4,10,"2024-07-25 13:39:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",13:39:00,14:24:00
+65,20,2,3,12,"2024-10-01 16:26:00","Station BRT Liberté 5","Station BRT Grand Médine",16:26:00,17:11:00
+66,20,1,1,14,"2024-12-20 08:58:00","Gare de Dakar","Gare de Bargny",08:58:00,09:28:00
+67,20,2,3,4,"2023-03-31 23:02:00","Station BRT Liberté 5","Station BRT Guédiawaye",23:02:00,23:47:00
+68,21,2,3,4,"2023-05-18 16:23:00","Station BRT Liberté 5","Station BRT Guédiawaye",16:23:00,17:08:00
+69,21,1,2,1,"2024-03-26 05:34:00","Gare de Diamniadio","Gare de Dakar",05:34:00,06:04:00
+70,22,2,3,4,"2023-06-19 17:26:00","Station BRT Liberté 5","Station BRT Guédiawaye",17:26:00,18:11:00
+71,22,2,3,13,"2024-11-23 09:10:00","Station BRT Liberté 5","Station BRT Grand Yoff",09:10:00,09:55:00
+72,22,1,1,2,"2024-05-04 19:05:00","Gare de Dakar","Gare de Diamniadio",19:05:00,19:35:00
+73,23,2,10,4,"2024-12-15 15:13:00","Station BRT Collège Sacré-Cœur","Station BRT Guédiawaye",15:13:00,15:58:00
+74,23,2,3,4,"2023-06-11 10:30:00","Station BRT Liberté 5","Station BRT Guédiawaye",10:30:00,11:15:00
+75,23,1,15,2,"2023-07-07 00:56:00","Gare de Mbao","Gare de Diamniadio",00:56:00,01:26:00
+76,23,2,4,13,"2023-11-30 18:01:00","Station BRT Guédiawaye","Station BRT Grand Yoff",18:01:00,18:46:00
+77,23,2,3,10,"2024-05-28 04:01:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",04:01:00,04:46:00
+78,24,1,2,7,"2024-08-20 18:44:00","Gare de Diamniadio","Gare de Dalifort",18:44:00,19:14:00
+79,24,2,4,12,"2024-02-17 08:21:00","Station BRT Guédiawaye","Station BRT Grand Médine",08:21:00,09:06:00
+80,24,2,4,10,"2024-12-27 03:22:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",03:22:00,04:07:00
+81,24,1,1,14,"2023-06-17 01:31:00","Gare de Dakar","Gare de Bargny",01:31:00,02:01:00
+82,24,2,3,4,"2024-01-20 00:36:00","Station BRT Liberté 5","Station BRT Guédiawaye",00:36:00,01:21:00
+83,25,2,3,10,"2024-10-19 16:46:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",16:46:00,17:31:00
+84,25,1,1,8,"2024-08-20 13:15:00","Gare de Dakar","Gare de Pikine",13:15:00,13:45:00
+85,25,2,3,10,"2023-02-02 04:09:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",04:09:00,04:54:00
+86,25,2,4,3,"2023-11-01 10:47:00","Station BRT Guédiawaye","Station BRT Liberté 5",10:47:00,11:32:00
+87,26,1,2,15,"2023-03-21 22:37:00","Gare de Diamniadio","Gare de Mbao",22:37:00,23:07:00
+88,26,2,3,13,"2024-01-16 00:09:00","Station BRT Liberté 5","Station BRT Grand Yoff",00:09:00,00:54:00
+89,27,2,10,3,"2024-03-08 18:33:00","Station BRT Collège Sacré-Cœur","Station BRT Liberté 5",18:33:00,19:18:00
+90,28,1,2,1,"2023-10-14 00:13:00","Gare de Diamniadio","Gare de Dakar",00:13:00,00:43:00
+91,28,2,4,10,"2023-08-19 21:27:00","Station BRT Guédiawaye","Station BRT Collège Sacré-Cœur",21:27:00,22:12:00
+92,28,2,4,13,"2024-04-23 15:30:00","Station BRT Guédiawaye","Station BRT Grand Yoff",15:30:00,16:15:00
+93,29,1,2,1,"2024-09-03 10:50:00","Gare de Diamniadio","Gare de Dakar",10:50:00,11:20:00
+94,29,2,13,4,"2023-05-13 09:25:00","Station BRT Grand Yoff","Station BRT Guédiawaye",09:25:00,10:10:00
+95,29,2,3,4,"2024-12-14 02:59:00","Station BRT Liberté 5","Station BRT Guédiawaye",02:59:00,03:44:00
+96,29,1,1,7,"2023-05-19 09:19:00","Gare de Dakar","Gare de Dalifort",09:19:00,09:49:00
+97,29,2,4,3,"2024-05-08 03:02:00","Station BRT Guédiawaye","Station BRT Liberté 5",03:02:00,03:47:00
+98,30,2,3,12,"2024-11-11 20:00:00","Station BRT Liberté 5","Station BRT Grand Médine",20:00:00,20:45:00
+99,30,1,2,1,"2023-09-07 10:25:00","Gare de Diamniadio","Gare de Dakar",10:25:00,10:55:00
+100,31,2,4,13,"2023-03-07 04:29:00","Station BRT Guédiawaye","Station BRT Grand Yoff",04:29:00,05:14:00
+101,32,2,3,10,"2023-01-07 13:48:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",13:48:00,14:33:00
+102,32,1,2,8,"2023-08-14 21:46:00","Gare de Diamniadio","Gare de Pikine",21:46:00,22:16:00
+103,32,2,4,12,"2023-12-08 17:35:00","Station BRT Guédiawaye","Station BRT Grand Médine",17:35:00,18:20:00
+104,33,2,4,3,"2024-11-14 05:48:00","Station BRT Guédiawaye","Station BRT Liberté 5",05:48:00,06:33:00
+105,33,1,2,14,"2023-07-04 07:28:00","Gare de Diamniadio","Gare de Bargny",07:28:00,07:58:00
+106,33,2,3,4,"2024-08-12 22:44:00","Station BRT Liberté 5","Station BRT Guédiawaye",22:44:00,23:29:00
+107,33,2,4,13,"2024-09-03 05:10:00","Station BRT Guédiawaye","Station BRT Grand Yoff",05:10:00,05:55:00
+108,34,1,2,11,"2023-02-19 19:51:00","Gare de Diamniadio","Gare de Rufisque",19:51:00,20:21:00
+109,34,2,4,3,"2024-09-26 02:10:00","Station BRT Guédiawaye","Station BRT Liberté 5",02:10:00,02:55:00
+110,34,2,12,3,"2024-03-09 04:27:00","Station BRT Grand Médine","Station BRT Liberté 5",04:27:00,05:12:00
+111,34,1,1,14,"2024-11-02 05:27:00","Gare de Dakar","Gare de Bargny",05:27:00,05:57:00
+112,34,2,4,3,"2024-02-22 07:39:00","Station BRT Guédiawaye","Station BRT Liberté 5",07:39:00,08:24:00
+113,35,2,4,3,"2024-10-01 03:20:00","Station BRT Guédiawaye","Station BRT Liberté 5",03:20:00,04:05:00
+114,35,1,1,15,"2024-01-27 14:36:00","Gare de Dakar","Gare de Mbao",14:36:00,15:06:00
+115,35,2,4,3,"2023-04-09 20:46:00","Station BRT Guédiawaye","Station BRT Liberté 5",20:46:00,21:31:00
+116,35,2,4,12,"2023-09-03 09:52:00","Station BRT Guédiawaye","Station BRT Grand Médine",09:52:00,10:37:00
+117,35,1,11,2,"2023-07-09 15:32:00","Gare de Rufisque","Gare de Diamniadio",15:32:00,16:02:00
+118,36,2,4,12,"2024-06-14 06:48:00","Station BRT Guédiawaye","Station BRT Grand Médine",06:48:00,07:33:00
+119,36,2,12,4,"2023-01-28 18:44:00","Station BRT Grand Médine","Station BRT Guédiawaye",18:44:00,19:29:00
+120,37,1,1,2,"2023-09-25 22:02:00","Gare de Dakar","Gare de Diamniadio",22:02:00,22:32:00
+121,37,2,3,4,"2023-08-03 02:54:00","Station BRT Liberté 5","Station BRT Guédiawaye",02:54:00,03:39:00
+122,37,2,3,4,"2023-12-14 09:47:00","Station BRT Liberté 5","Station BRT Guédiawaye",09:47:00,10:32:00
+123,38,1,2,6,"2023-01-28 19:55:00","Gare de Diamniadio","Gare de Hann",19:55:00,20:25:00
+124,39,2,4,3,"2023-06-24 03:13:00","Station BRT Guédiawaye","Station BRT Liberté 5",03:13:00,03:58:00
+125,39,2,4,3,"2024-11-21 08:30:00","Station BRT Guédiawaye","Station BRT Liberté 5",08:30:00,09:15:00
+126,39,1,2,1,"2023-08-09 07:07:00","Gare de Diamniadio","Gare de Dakar",07:07:00,07:37:00
+127,39,2,3,10,"2024-04-06 12:55:00","Station BRT Liberté 5","Station BRT Collège Sacré-Cœur",12:55:00,13:40:00
+128,40,2,4,3,"2023-09-14 17:46:00","Station BRT Guédiawaye","Station BRT Liberté 5",17:46:00,18:31:00
+129,40,1,9,1,"2024-12-20 08:01:00","Gare de Thiaroye","Gare de Dakar",08:01:00,08:31:00
