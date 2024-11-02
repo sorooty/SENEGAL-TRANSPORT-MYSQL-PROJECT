@@ -12,7 +12,7 @@ Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’
 
 1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
 
-1.1. Objectifs
+    1.1. Objectifs
 
 1. Modélisation des Données
     
