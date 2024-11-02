@@ -1,5 +1,7 @@
 # Rapport Technique - Projet 11 “SEN-TRANSPORT” :  Base de données, analyse et interprétation des données
 
+![Texte alternatif](PPT%20PROJET%2011%20(2).jpg)
+
 ## Avant - Propos :
 
 > Ce rapport, faisant état de **fiche technique**, présente et explique en détail notre travail **analytique pour l’exploitation des données des utilisateurs** des transports publics à Dakar, Sénégal, plus particulièrement du TER et du BRT au sein de l’ISJA de Dakar.
