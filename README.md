@@ -1,42 +1,47 @@
 # Rapport Technique - Projet 11 “SEN-TRANSPORT” :  Base de données, analyse et interprétation des données
-![Texte alternatif](PPT%20PROJET%2011%20(2).jpg)
+
 ## Avant - Propos :
 
-> Ce rapport, faisant état de **fiche technique**, présente et explique en détail notre travail **analytique pour l’exploitation des données des utilisateurs** des transports publics à Dakar, Sénégal, plus particulièrement du TER et du BRT au sein de l’ISJA de Dakar.
+> Ce rapport, faisant état de **fiche technique**, présente et explique en détail notre travail **analytique pour l’exploitation des données des utilisateurs** des transports publics à Dakar, Sénégal, plus particulièrement du **TER et du BRT** au sein de **l’ISJA de Dakar**.
 Au delà de rendre compte de notre **travail de recherche et d’analyse**, l’objectif final est de fournir une explication concise et compréhensible, même pour les non-initiés à **l’informatique technique**.
+> 
+> 
+> ### **Les Objectifs :**
+> 
+> - **Profilage des utilisateurs** : catégorisation des usagers (élèves, personnel, etc.).
+> - **Analyse des trajets** : étude des trajets réalisés et des fréquences d’utilisation.
+> - **Mesure de la satisfaction** : évaluation des retours d’expérience des utilisateurs.
+> - **Propositions d’innovations** : suggestions d’améliorations basées sur les données récoltées.
 > 
 
 ---
 
-## Sommaire :
+## Sommaire du rapport :
 
-1. [Avant-Propos](#avant-propos)
-2. [Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles](#introduction-aux-concepts-fondamentaux-des-bases-de-données-relationnelles)
-   - [Objectifs](#objectifs)
-3. [Modélisation des Données](#modélisation-des-données)
+## Sommaire du rapport
+
+1. [Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles](#introduction-aux-concepts-fondamentaux-des-bases-de-données-relationnelles)
+2. [Modélisation des Données](#modélisation-des-données)
    - [Modèle Conceptuel de Données (MCD)](#modèle-conceptuel-de-données-mcd)
    - [Modèle Logique de Données (MLD)](#modèle-logique-de-données-mld)
-4. [Mise en Œuvre Technique : Contenu de la Base de Données](#mise-en-œuvre-technique--contenu-de-la-base-de-données)
+3. [Mise en Œuvre Technique : Le Contenu de notre base de données](#mise-en-œuvre-technique--le-contenu-de-notre-base-de-données)
    - [Création des Tables dans MySQL](#création-des-tables-dans-mysql)
-5. [Analyse des Données](#analyse-des-données)
-6. [Interprétation et Résultats](#interprétation-et-résultats)
-7. [Conclusion et Propositions](#conclusion-et-propositions)
-   - [Propositions d’Amélioration](#propositions-damélioration)
-8. [Outils Utilisés](#outils-utilisés)
-9. [Webographie / Sources](#webographie--sources)
-10. [Crédits](#crédits)
+4. [Analyse et manipulation des données de la base](#analyse-et-manipulation-des-données-de-la-base)
+5. [Interprétation et exploitation des résultats de l’analyse](#interprétation-et-exploitation-des-résultats-de-lanalyse)
+6. [Conclusion](#conclusion)
+
 
 ---
 
-### **Les membres du cabinet CES-IT** :
+## **Les membres du cabinet CES-IT** :
 
 - **Seyni Jr. Baldé**, **Ingénieur de Données et chef de projet chez *CES-IT** (créateur du rapport technique)*
 - **Jean Léandre Tiemtoré**,  **Ingénieur en Optimisation et Performance** chez *CES-IT (auteur du rapport courant et de la méthode GAR)*
-- **Sonia Hameg**, **Ingénieur en Conception Technique et RSE** chez *CES-IT (auteur des schéma techniques et de l’insertion de la RSE*)
+- **Sonia Hameg**, **Ingénieur en Conception Technique et RSE** chez *CES-IT (auteur des schéma techniques et de l’insertion de la RSE)*
 
 ---
 
-## 1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
+# 1. Introduction aux Concepts Fondamentaux des Bases de Données Relationnelles
 
 Dans le cadre de notre projet de digitalisation et d'optimisation des données des usagers du TER et du BRT au sein de l’établissement, il est essentiel de bien comprendre les principes des bases de données relationnelles et les concepts fondamentaux associés. **Cette section présente les notions de base qui sont au cœur de la structuration, de la gestion et de l’analyse des données dans notre projet.**
 
@@ -104,16 +109,11 @@ Elle regroupe des informations de manière cohérente, offrant un accès central
 > 
 </aside>
 
-### **1.1. Objectifs**
-
-- **Profilage des utilisateurs** : catégorisation des usagers (élèves, personnel, etc.).
-- **Analyse des trajets** : étude des trajets réalisés et des fréquences d’utilisation.
-- **Mesure de la satisfaction** : évaluation des retours d’expérience des utilisateurs.
-- **Propositions d’innovations** : suggestions d’améliorations basées sur les données récoltées.
+---
 
 ---
 
-## **2. Modélisation des Données**
+# **2. Modélisation des Données**
 
 ### **2.1. Modèle Conceptuel de Données (MCD)**
 
@@ -202,14 +202,14 @@ Voici les principales **entités de notre étude projet** :
 
 ---
 
-## **3. Mise en Œuvre Technique : Le Contenu de notre base de données**
+# **3. Mise en Œuvre Technique : Le Contenu de notre base de données**
 
-> Dans cette partie, nous détaillons le processus de création des différentes entités / tables de notre base de données directement dans l’éditeur de code. En bref, nous passons de l’aspect abstrait des schémas MLD et MCD à un modèle réel et exploitable en implémenté en SQL (qui est le langage de requetes nous permettant d’intéragir avec ces tables et d’en extraire les informations de notre choix).
+> Dans cette partie, nous détaillons **le processus de création** des différentes **entités / tables** de notre base de données directement dans l’éditeur de code. En bref, nous passons de l’aspect abstrait des schémas MLD et MCD à un modèle réel et exploitable en implémenté en SQL (qui est le langage de requetes nous permettant d’intéragir avec ces tables et d’en extraire les informations de notre choix).
 > 
 
 ### **Création des Tables dans MySQL :**
 
-> Requetes de création et affichage des tables de la base de donnée
+> Requetes de **création** et **affichage** des tables de la base de donnée grace au **langage SQL**
 > 
 
 ## Table Utilisateur
@@ -271,7 +271,7 @@ CREATE TABLE IF NOT EXISTS Utilisateur (
 
 ### Affichage sur Mysql CommandLine :
 
-![table users.png](/table_users.png)
+![table users.png](6b79b594-e8b4-435b-b4fd-6314ed36baa3.png)
 
 ## Table Transport
 
@@ -552,14 +552,12 @@ CREATE TABLE IF NOT EXISTS Enquete (
 
 ---
 
-## **4. Analyse et Interprétation des Données**
+# **4. Analyse et manipulation des données de la base**
 
 ### **4.1. Requêtes SQL pour l’Analyse des Données**
 
 > Voici une série de **requêtes SQL** qui vont nous permettre **d’analyser les données de la base et d’en extraire des informations utiles** pour l’entreprise.
 > 
-
----
 
 ## **Nombre total d’utilisateurs par type (élève, personnel prof)**
 
@@ -976,7 +974,7 @@ LEFT JOIN Enquete ON Utilisateur.id_utilisateur = Enquete.id_utilisateur;
 
 ---
 
-## **5. Interprétation des résultats :**
+# **5. Interprétation et exploitation des résultats de l’analyse : les “KPIs”**
 
 <aside>
 
@@ -990,13 +988,13 @@ L’analyse des données révèle plusieurs aspects clés de l’utilisation des
 
 1. **Comparaison des utilisateurs selon le type de transport (Graphe 1)**
     
-    > Le graphique compare le nombre d'utilisateurs des transports BRT et TER, montrant une légère préférence pour le BRT avec 38 utilisateurs contre 34 pour le TER.
+    > Le graphique **compare le nombre d'utilisateurs** des transports BRT et TER, montrant **une légère préférence pour le BRT** avec **38 utilisateurs contre 34 pour le TER**.
     > 
     > 
     > ![Capture d'écran 2024-11-02 003806.png](Capture_dcran_2024-11-02_003806.png)
     > 
     
-     Cela suggère une répartition équilibrée, bien que le BRT soit légèrement plus populaire. Cette information permet de cibler les ressources et les améliorations selon les préférences des utilisateurs.
+     Cela suggère une répartition équilibrée, **bien que le BRT soit légèrement plus populaire.** Cette information permet de cibler les ressources et les améliorations selon les préférences des utilisateurs.
     
 2. **Les trajets les plus populaires (Graphe 2)**
     
@@ -1013,9 +1011,9 @@ L’analyse des données révèle plusieurs aspects clés de l’utilisation des
     > La carte interactive montre **la localisation des principales stations de transport à Dakar**.
     > 
     > 
-    > ![Capture d'écran 2024-11-02 020811.png](/carte1.png)
+    > ![Capture d'écran 2024-11-02 020811.png](Capture_dcran_2024-11-02_020811.png)
     > 
-    > ![Capture d'écran 2024-10-31 140317.png](/Carte2.png)
+    > ![Capture d'écran 2024-10-31 140317.png](Capture_dcran_2024-10-31_140317.png)
     > 
     
     Elle permet une **visualisation rapide des zones desservies**, facilitant **l’identification des zones potentiellement sous-desservies** ou nécessitant de nouvelles stations.
@@ -1079,14 +1077,37 @@ Ces informations permettent aux sociétés de transport et aux autorités de pre
 
 ---
 
-## **6. Conclusion et Propositions**
+# **6. Conclusion et Propositions**
 
-### **6.1. Propositions d’amélioration**
+### **Propositions d’amélioration**
 
-Sur la base des données analysées, voici quelques suggestions d’améliorations :
-1. **Développement d’une application mobile** : Offrir aux usagers une interface pour consulter les horaires en temps réel, acheter leurs billets et donner leur feedback directement.
-2. **Augmentation de la capacité des stations les plus fréquentées** : Investir dans les infrastructures des stations très fréquentées du TER pour réduire les embouteillages aux heures de pointe.
+> Sur la base des données analysées, voici quelques **suggestions d’améliorations pour améliorer l’expérience des usagers et l’efficacité des services de transport :**
+> 
+
+1. **Développement d’une application mobile**
+    
+    Une application mobile dédiée pourrait offrir aux usagers une interface pratique pour consulter les horaires en temps réel, acheter leurs billets et donner leur feedback directement depuis leur téléphone. Voici quelques fonctionnalités clés pour maximiser l’adoption de l’application :
+    
+    - **Horaires en temps réel** : Afficher les horaires en direct pour chaque station, avec une mise à jour en fonction des retards ou incidents.
+    - **Billetterie en ligne** : Permettre l’achat de billets électroniques directement via l’application, avec diverses options de paiement (cartes bancaires, portefeuilles électroniques, etc.).
+    - **Feedback et réclamations** : Intégrer un formulaire de feedback pour recueillir les impressions des usagers, ainsi qu’une fonction de signalement pour des incidents ou dysfonctionnements constatés.
+    - **Itinéraires personnalisés** : Fournir aux usagers des suggestions de trajets optimisés en fonction de leurs préférences et de l’affluence.
+2. **Augmentation de la capacité des stations les plus fréquentées**
+    
+    Les données de fréquentation montrent que certaines stations du TER connaissent des embouteillages importants aux heures de pointe. Pour résoudre cette problématique :
+    
+    - **Aménagement des infrastructures** : Agrandir les quais et les halls d’attente dans les stations à forte affluence, en particulier celles desservant les pôles d’activité ou établissements scolaires.
+    - **Ajout de signalisation** : Installer des panneaux de signalisation supplémentaires pour orienter les flux de passagers et réduire les engorgements.
+    - **Renforcement du personnel d’accueil et de sécurité** : Augmenter le nombre d’agents présents dans ces stations pour assurer la fluidité des déplacements et répondre aux besoins des usagers en temps réel.
 3. **Orienter l’analyse sur les tarifs par types de trajet**
+    
+    Analyser la tarification par type de trajet (courts, longs, périurbains) permettrait de mieux comprendre les préférences des usagers et d’optimiser la grille tarifaire. En adaptant les prix selon les spécificités de chaque segment :
+    
+    - **Étude de la rentabilité** : Analyser les coûts associés à chaque type de trajet pour ajuster les prix en fonction de la durée, du nombre de correspondances et de la demande.
+    - **Propositions de réductions** : Proposer des tarifs préférentiels pour les trajets récurrents, notamment pour les travailleurs et étudiants, ou pour les groupes, afin de fidéliser une clientèle régulière.
+    - **Création d’abonnements personnalisés** : Introduire des abonnements adaptés aux trajets les plus courants, comme les trajets domicile-travail ou domicile-école, permettant de réduire les coûts pour les usagers réguliers.
+
+Ces propositions visent à améliorer l’accessibilité, la satisfaction et la fidélisation des usagers tout en optimisant l’efficacité opérationnelle des services de transport.
 
 ### Conclusion
 
@@ -1112,17 +1133,16 @@ Pour mener à bien ce projet, plusieurs outils ont été mobilisés :
 
 ### Webographie  / sources :
 
-| Année de publication | Auteur | Titre | Url | Date de consultation |
-| --- | --- | --- | --- | --- |
-| 0 |  | SQL HAVING - SQL | [https://sql.sh/cours/having#google_vignette](https://sql.sh/cours/having#google_vignette) | 23 septembre 2024 23:45 |
-| 0 |  | Google Forms | [https://docs.google.com/forms/u/0/](https://docs.google.com/forms/u/0/) | 23 septembre 2024 23:46 |
-| 0 |  | MySQL Constraints | [https://www.w3schools.com/mysql/mysql_constraints.asp](https://www.w3schools.com/mysql/mysql_constraints.asp) | 23 septembre 2024 23:46 |
-| 0 |  | Train Express Régional - APIX-S.A. | [https://investinsenegal.sn/grand_travaux/train-express-regional/](https://investinsenegal.sn/grand_travaux/train-express-regional/) | 23 septembre 2024 23:48 |
-| 2021 |  | Coût, montage financier, tarifs, rotations, etc : tout sur le TER – Topnews | [https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/](https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/) | 23 septembre 2024 23:49 |
-| 0 |  | Responsabilité numérique des entreprises : enjeux des données, environnementaux et sociaux | France Stratégie | [https://www.strategie.gouv.fr/infographies/responsabilite-numerique-entreprises-enjeux-donnees-environnementaux-sociaux](https://www.strategie.gouv.fr/infographies/responsabilite-numerique-entreprises-enjeux-donnees-environnementaux-sociaux) | 10 octobre 2024 16:01 |
-| 2024 |  | undefinedterdakar.sn | [https://www.terdakar.sn](https://www.terdakar.sn) | 2 novembre 2024 02:05 |
-| 0 |  | Gamme tarifaire | [https://www.sunubrt.sn/titres-et-tarifs/quel-titre-choisir/](https://www.sunubrt.sn/titres-et-tarifs/quel-titre-choisir/) | 2 novembre 2024 02:06 |
-| 0 |  | Coût, montage financier, tarifs, rotations, etc : tout sur le TER – Topnews | [https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/](https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/) | 2 novembre 2024 02:10 |
+| Titre | Url | Date de consultation |
+| --- | --- | --- |
+| SQL HAVING - SQL | [https://sql.sh/cours/having#google_vignette](https://sql.sh/cours/having#google_vignette) | 23 septembre 2024 23:45 |
+| Google Forms | [https://docs.google.com/forms/u/0/](https://docs.google.com/forms/u/0/) | 23 septembre 2024 23:46 |
+| MySQL Constraints | [https://www.w3schools.com/mysql/mysql_constraints.asp](https://www.w3schools.com/mysql/mysql_constraints.asp) | 23 septembre 2024 23:46 |
+| Train Express Régional - APIX-S.A. | [https://investinsenegal.sn/grand_travaux/train-express-regional/](https://investinsenegal.sn/grand_travaux/train-express-regional/) | 23 septembre 2024 23:48 |
+| Coût, montage financier, tarifs, rotations, etc : tout sur le TER – Topnews | [https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/](https://www.topnews.sn/cout-montage-financier-tarifs-rotations-etc-tout-sur-le-ter/) | 23 septembre 2024 23:49 |
+| Responsabilité numérique des entreprises : enjeux des données, environnementaux et sociaux | France Stratégie | [https://www.strategie.gouv.fr/infographies/responsabilite-numerique-entreprises-enjeux-donnees-environnementaux-sociaux](https://www.strategie.gouv.fr/infographies/responsabilite-numerique-entreprises-enjeux-donnees-environnementaux-sociaux) | 10 octobre 2024 16:01 |
+| undefinedterdakar.sn | [https://www.terdakar.sn](https://www.terdakar.sn) | 2 novembre 2024 02:05 |
+| Gamme tarifaire | [https://www.sunubrt.sn/titres-et-tarifs/quel-titre-choisir/](https://www.sunubrt.sn/titres-et-tarifs/quel-titre-choisir/) | 2 novembre 2024 02:06 |
 
 ---
 
