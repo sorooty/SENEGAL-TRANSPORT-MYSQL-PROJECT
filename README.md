@@ -1,6 +1,6 @@
 # Rapport Technique - Projet 11 “SEN-TRANSPORT” :  Base de données, analyse et interprétation des données
 
-[Projet 11 DashboardBI.pdf](/PPT%20PROJET%2011%20(2).jpg)
+![Projet 11 DashboardBI.pdf](/PPT%20PROJET%2011%20(2).jpg)
 
 ## Avant - Propos :
 
