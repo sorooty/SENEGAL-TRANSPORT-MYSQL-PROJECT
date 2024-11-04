@@ -141,7 +141,7 @@ Voici les principales **entités de notre étude projet** :
 
 ### Schéma MLD Technique JMerise
 
-![SCHEMA MLD TECHNIQUE.jpeg](SCHEMA_MLD_TECHNIQUE.jpeg)
+![SCHEMA MLD TECHNIQUE.jpeg](/MLD.jpeg)
 
 ### **Utilisateur**
 
