@@ -980,7 +980,7 @@ LEFT JOIN Enquete ON Utilisateur.id_utilisateur = Enquete.id_utilisateur;
 
 L’analyse des données révèle plusieurs aspects clés de l’utilisation des transports publics à Dakar, offrant des informations précieuses pour l'amélioration des services :
 
-[Projet 11 DashboardBI.pdf](./Documentation/Dashboard%20BI%20Projet%2011.pdf)
+[Projet 11 DashboardBI.pdf](/Documentation/Dashboard%20BI%20Projet%2011.pdf)
 
 ![Capture d'écran 2024-11-02 003729.png](Capture_dcran_2024-11-02_003729.png)
 
@@ -1011,9 +1011,9 @@ L’analyse des données révèle plusieurs aspects clés de l’utilisation des
     > La carte interactive montre **la localisation des principales stations de transport à Dakar**.
     > 
     > 
-    > ![Capture d'écran 2024-11-02 020811.png](Capture_dcran_2024-11-02_020811.png)
+    > ![Capture d'écran 2024-11-02 020811.png](/carte1.png)
     > 
-    > ![Capture d'écran 2024-10-31 140317.png](Capture_dcran_2024-10-31_140317.png)
+    > ![Capture d'écran 2024-10-31 140317.png](/Carte2.png)
     > 
     
     Elle permet une **visualisation rapide des zones desservies**, facilitant **l’identification des zones potentiellement sous-desservies** ou nécessitant de nouvelles stations.
