@@ -122,11 +122,11 @@ Elle regroupe des informations de manière cohérente, offrant un accès central
 
 Voici les principales **entités de notre étude projet** :
 
-- **`Utilisateur** :` Représente les informations des usagers (élèves, personnel).
-- **`Transport** :` Type de transport utilisé (TER, BRT, autre).
-- **`Station** :` Stations desservies par les moyens de transport.
-- **`Trajet** :` Informations sur les trajets réalisés par les utilisateurs.
-- **`Enquête** :` Réponses aux enquêtes sur la satisfaction des usagers.
+- `**Utilisateur** :` Représente les informations des usagers (élèves, personnel).
+- `**Transport** :` Type de transport utilisé (TER, BRT, autre).
+- `**Station** :` Stations desservies par les moyens de transport.
+- `**Trajet** :` Informations sur les trajets réalisés par les utilisateurs.
+- `**Enquête** :` Réponses aux enquêtes sur la satisfaction des usagers.
 
 ### Schéma MCD simplifié
 
@@ -163,7 +163,7 @@ Voici les principales **entités de notre étude projet** :
 
 ### **Trajet**
 
-- **`id_trajet** :` INT (Clé Primaire)
+- `id_trajet** :` INT (Clé Primaire)
 - `id_utilisateur:` INT (Clé Étrangère → UTILISATEUR)
 - `id_transport :` INT (Clé Étrangère → TRANSPORT)
 - `id_station_depart :` INT (Clé Étrangère → STATION)
