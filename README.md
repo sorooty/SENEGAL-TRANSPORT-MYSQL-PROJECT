@@ -980,7 +980,7 @@ LEFT JOIN Enquete ON Utilisateur.id_utilisateur = Enquete.id_utilisateur;
 
 L’analyse des données révèle plusieurs aspects clés de l’utilisation des transports publics à Dakar, offrant des informations précieuses pour l'amélioration des services :
 
-[Projet 11 DashboardBI.pdf](Porjet_11_DashboardBI.pdf)
+[Projet 11 DashboardBI.pdf](./Documentation/Dashboard%20BI%20Projet%2011.pdf)
 
 ![Capture d'écran 2024-11-02 003729.png](Capture_dcran_2024-11-02_003729.png)
 
