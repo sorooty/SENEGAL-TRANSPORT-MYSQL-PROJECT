@@ -1017,6 +1017,7 @@ L’analyse des données révèle plusieurs aspects clés de l’utilisation des
     > 
     > ![Capture d'écran 2024-10-31 140317.png](/Carte2.png)
     > 
+    > ![Cartebrt.jpg](/carte%20brt.jpg)
     
     Elle permet une **visualisation rapide des zones desservies**, facilitant **l’identification des zones potentiellement sous-desservies** ou nécessitant de nouvelles stations.
     
