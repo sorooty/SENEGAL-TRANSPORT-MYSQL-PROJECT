@@ -104,6 +104,8 @@ Elle regroupe des informations de manière cohérente, offrant un accès central
     
     Dans notre projet, cela permet de s’assurer que les données des trajets et des utilisateurs sont bien structurées et exemptes d’erreurs.
     
+***Schéma récapitulatif***
+![alt text](napkin-BDD_explications.png)
 
 <aside>
 
