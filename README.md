@@ -1112,7 +1112,7 @@ Ces informations permettent aux sociétés de transport et aux autorités de pre
     - **Propositions de réductions** : Proposer des tarifs préférentiels pour les trajets récurrents, notamment pour les travailleurs et étudiants, ou pour les groupes, afin de fidéliser une clientèle régulière.
     - **Création d’abonnements personnalisés** : Introduire des abonnements adaptés aux trajets les plus courants, comme les trajets domicile-travail ou domicile-école, permettant de réduire les coûts pour les usagers réguliers.
 
-***Schéma récapitulatif** :
+***Schéma récapitulatif*** :
 
 ![CarteMentale](<WhatsApp Image 2024-11-06 at 17.33.42.jpeg>)
 
