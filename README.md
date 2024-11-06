@@ -1122,7 +1122,7 @@ Ces informations permettent aux sociétés de transport et aux autorités de pre
 
 
 
-***Schémas récapitulatif*** :
+***Schéma récapitulatif*** :
 
 ![SchémaOPTI](napkin-selection.png)
 
