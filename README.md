@@ -1082,41 +1082,50 @@ Ces informations permettent aux sociétés de transport et aux autorités de pre
 
 ---
 
-# **6. Conclusion et Propositions**
+# **6. Conclusion et Optimisation**
+
+# **Optimisation des performances de la base de données**
 
 ### **Propositions d’amélioration**
 
-> Sur la base des données analysées, voici quelques **suggestions d’améliorations pour améliorer l’expérience des usagers et l’efficacité des services de transport :**
-> 
+> Pour garantir une utilisation efficace de la base de données et offrir une expérience optimale aux usagers, voici quelques **suggestions d'optimisation** :
 
-1. **Développement d’une application mobile**
-    
-    Une application mobile dédiée pourrait offrir aux usagers une interface pratique pour consulter les horaires en temps réel, acheter leurs billets et donner leur feedback directement depuis leur téléphone. Voici quelques fonctionnalités clés pour maximiser l’adoption de l’application :
-    
-    - **Horaires en temps réel** : Afficher les horaires en direct pour chaque station, avec une mise à jour en fonction des retards ou incidents.
-    - **Billetterie en ligne** : Permettre l’achat de billets électroniques directement via l’application, avec diverses options de paiement (cartes bancaires, portefeuilles électroniques, etc.).
-    - **Feedback et réclamations** : Intégrer un formulaire de feedback pour recueillir les impressions des usagers, ainsi qu’une fonction de signalement pour des incidents ou dysfonctionnements constatés.
-    - **Itinéraires personnalisés** : Fournir aux usagers des suggestions de trajets optimisés en fonction de leurs préférences et de l’affluence.
-2. **Augmentation de la capacité des stations les plus fréquentées**
-    
-    Les données de fréquentation montrent que certaines stations du TER connaissent des embouteillages importants aux heures de pointe. Pour résoudre cette problématique :
-    
-    - **Aménagement des infrastructures** : Agrandir les quais et les halls d’attente dans les stations à forte affluence, en particulier celles desservant les pôles d’activité ou établissements scolaires.
-    - **Ajout de signalisation** : Installer des panneaux de signalisation supplémentaires pour orienter les flux de passagers et réduire les engorgements.
-    - **Renforcement du personnel d’accueil et de sécurité** : Augmenter le nombre d’agents présents dans ces stations pour assurer la fluidité des déplacements et répondre aux besoins des usagers en temps réel.
-3. **Orienter l’analyse sur les tarifs par types de trajet**
-    
-    Analyser la tarification par type de trajet (courts, longs, périurbains) permettrait de mieux comprendre les préférences des usagers et d’optimiser la grille tarifaire. En adaptant les prix selon les spécificités de chaque segment :
-    
-    - **Étude de la rentabilité** : Analyser les coûts associés à chaque type de trajet pour ajuster les prix en fonction de la durée, du nombre de correspondances et de la demande.
-    - **Propositions de réductions** : Proposer des tarifs préférentiels pour les trajets récurrents, notamment pour les travailleurs et étudiants, ou pour les groupes, afin de fidéliser une clientèle régulière.
-    - **Création d’abonnements personnalisés** : Introduire des abonnements adaptés aux trajets les plus courants, comme les trajets domicile-travail ou domicile-école, permettant de réduire les coûts pour les usagers réguliers.
+1. **Indexation des données fréquemment consultées**
+   
+   La création d'index sur les données les plus souvent requêtées permettrait de réduire le temps de réponse des requêtes et d'améliorer les performances globales de la base de données. Voici les actions clés à envisager :
+   
+   - **Identification des colonnes critiques** : Analyser les requêtes pour identifier les colonnes les plus consultées et créer des index ciblés.
+   - **Mise à jour régulière des index** : Assurer un entretien des index pour éviter les pertes d’efficacité dues aux modifications fréquentes des données.
+   
+2. **Partitionnement des tables volumineuses**
 
-***Schéma récapitulatif*** :
+   Le partitionnement des tables contenant un grand volume de données permettrait de gérer les ressources de manière optimale et de réduire le temps d’accès aux données. Pour un partitionnement efficace :
+   
+   - **Analyse des tables à fort volume** : Identifier les tables présentant des millions de lignes et les diviser en partitions logiques (par date, par type de donnée, etc.).
+   - **Optimisation des performances de lecture** : En ciblant les partitions spécifiques, les requêtes s’exécutent plus rapidement sans interroger l’ensemble de la table.
+
+3. **Cache des requêtes fréquentes**
+
+   Mettre en cache les requêtes les plus fréquentes pourrait grandement améliorer les performances en réduisant la charge sur le serveur et les temps de réponse :
+   
+   - **Définir les requêtes critiques à mettre en cache** : Repérer les requêtes exécutées régulièrement et les placer en cache pour un accès rapide.
+   - **Planification de l’expiration du cache** : Configurer une durée de vie pour chaque cache afin de garantir l’actualisation des données sans surcharger les ressources.
+
+4. **Optimisation des requêtes SQL**
+
+   L’analyse et l’optimisation des requêtes SQL sont essentielles pour garantir un accès rapide aux données. Pour une optimisation efficace :
+   
+   - **Révision des requêtes lourdes** : Identifier et modifier les requêtes complexes ou lentes pour une exécution plus rapide.
+   - **Utilisation de jointures efficaces** : Privilégier des jointures adaptées pour limiter le volume de données traitées à chaque requête.
+   
+
+
+***Schémas récapitulatif*** :
 
 ![CarteMentale](<WhatsApp Image 2024-11-06 at 17.33.42.jpeg>)
 
-Ces propositions visent à améliorer l’accessibilité, la satisfaction et la fidélisation des usagers tout en optimisant l’efficacité opérationnelle des services de transport.
+
+
 
 ### Conclusion
 
