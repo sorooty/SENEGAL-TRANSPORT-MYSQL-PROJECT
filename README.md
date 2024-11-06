@@ -1084,7 +1084,7 @@ Ces informations permettent aux sociétés de transport et aux autorités de pre
 
 # **6. Conclusion et Optimisation**
 
-# **Optimisation des performances de la base de données**
+## **Optimisation des performances de la base de données**
 
 ### **Propositions d’amélioration**
 
