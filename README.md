@@ -1122,7 +1122,7 @@ Ces informations permettent aux sociétés de transport et aux autorités de pre
 
 ***Schémas récapitulatif*** :
 
-![CarteMentale](<WhatsApp Image 2024-11-06 at 17.33.42.jpeg>)
+![SchémaOPTI](napkin-selection.png)
 
 
 
