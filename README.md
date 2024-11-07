@@ -275,7 +275,7 @@ CREATE TABLE IF NOT EXISTS Utilisateur (
 
 ### Affichage sur Mysql CommandLine :
 
-![table users.png](6b79b594-e8b4-435b-b4fd-6314ed36baa3.png)
+![table users.png](/table_users.png)
 
 ## Table Transport
 
