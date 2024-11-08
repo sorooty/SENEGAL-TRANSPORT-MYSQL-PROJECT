@@ -104,38 +104,5 @@ JOIN Transport tr2 ON t2.id_transport = tr2.id_transport
 WHERE tr1.nom_transport != tr2.nom_transport;
 
 
---Groupe 3 : Durée et satisfaction des trajets
--- Trajet le plus récent et le plus ancien
-SELECT MAX(date_trajet) as Plus_récent, MIN(date_trajet) AS Plus_ancient
-FROM trajet;
-
--- Durée moyenne des trajets par type de transport
-SELECT tr.type_transport AS type_transport,
-       AVG(TIMEDIFF(t.heure_arrivee, t.heure_depart)) AS duree_moyenne
-FROM Transport tr
-JOIN Trajet t ON tr.id_transport = t.id_transport
-GROUP BY tr.type_transport;
-
--- Analyse des commentaires négatifs
-SELECT e.commentaires, e.satisfaction
-FROM Enquete e
-WHERE e.satisfaction < 5
-LIMIT 20;
-
--- Satisfaction moyenne par type de transport
-SELECT tr.nom_transport AS nom_transport, AVG(e.satisfaction) AS satisfaction_moyenne
-FROM Transport tr
-JOIN Trajet t ON tr.id_transport = t.id_transport
-JOIN Enquete e ON t.id_utilisateur = e.id_utilisateur
-GROUP BY tr.nom_transport;
-
--- Stations les moins fréquentées
-SELECT s.nom_station, COUNT(*) AS nombre_departs
-FROM Station s
-LEFT JOIN Trajet t ON s.id_station = t.id_station_depart
-GROUP BY s.nom_station
-ORDER BY nombre_departs ASC
-LIMIT 5;
-
 
 
